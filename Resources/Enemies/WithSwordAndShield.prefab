@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 4923118100569741203}
   - component: {fileID: 7898436262044665234}
   - component: {fileID: 2705827409002201373}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WithSwordAndShield
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,7 +91,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938271025860302016}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0

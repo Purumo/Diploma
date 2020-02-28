@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: -500070338905663603}
   - component: {fileID: 7561311495548709908}
   - component: {fileID: 7432627884277371012}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WithHammer
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,7 +90,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058172612299767911}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0

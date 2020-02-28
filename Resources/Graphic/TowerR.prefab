@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4105668120745006673}
   - component: {fileID: 7802842616576604022}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: roof_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5872275711685641628}
   - component: {fileID: 7651824104119367600}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: flagpole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2733992753920807038}
   - component: {fileID: 7569327438397899127}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: flag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 134488283537166336}
   - component: {fileID: 275092478356637746}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: balcony
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2480504015322101904}
   - component: {fileID: 4496709691041335979}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,7 +410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8334105550698192467}
   - component: {fileID: 3392281539434329496}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: roof_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -490,7 +490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5612112437254806106}
   - component: {fileID: 205983696325237806}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -570,7 +570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3615929477356699695}
   - component: {fileID: 8542783820239441467}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TowerR
   m_TagString: Untagged
   m_Icon: {fileID: 0}

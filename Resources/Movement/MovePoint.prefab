@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4387659365648318891}
   - component: {fileID: 7038937716567812005}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MovePoint
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -41,7 +41,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

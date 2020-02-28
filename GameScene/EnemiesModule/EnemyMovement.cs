@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using GameScene.Helpers;
-
 namespace GameScene.EnemiesModule
 {
     public class EnemyMovement : MonoBehaviour
     {
-        private const string PathSceneMovementPoints = "Movement/MovementPoints";
-
         public static int[][] moveTrajectories;
-        
         public static Transform[] movementPoints;
+
+        public Transform transformMovementPoints;
 
         void Awake()
         {
@@ -22,11 +19,10 @@ namespace GameScene.EnemiesModule
             moveTrajectories[2] = new int[8] { 9, 2, 3, 2, 4, 9, 8, 12 };
             moveTrajectories[3] = new int[7] { 6, 5, 4, 9, 2, 1, 11 };
 
-            Transform trMovementPoints = BasicUnityFunctions.GetTransform(PathSceneMovementPoints);
-            movementPoints = new Transform[trMovementPoints.childCount];
+            movementPoints = new Transform[transformMovementPoints.childCount];
             for(int i=0; i< movementPoints.Length; i++)
             {
-                movementPoints[i] = trMovementPoints.GetChild(i);
+                movementPoints[i] = transformMovementPoints.GetChild(i);
             }
         }
     }

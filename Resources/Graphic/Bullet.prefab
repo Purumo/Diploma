@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 728662361957118799}
   - component: {fileID: 4082184447462396611}
   - component: {fileID: 7954664737369977597}
-  m_Layer: 0
+  - component: {fileID: -5176532881535281512}
+  - component: {fileID: -660033385601963743}
+  m_Layer: 12
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 387323513821368845}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.05025927, y: 0.07937745, z: 0.22318}
+  m_LocalScale: {x: 0.08, y: 0.09, z: 0.1}
   m_Children:
   - {fileID: 8156541650356112635}
   m_Father: {fileID: 0}
@@ -127,6 +129,42 @@ PolygonCollider2D:
       - {x: 0.5168151, y: -2.2724922}
       - {x: 1.5902845, y: -2.1028278}
       - {x: 2.1961205, y: -1.9484873}
+--- !u!114 &-5176532881535281512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387323513821368845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e04aaffb5af0b1f40850afa3537ba8d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 40
+  impactEffect: {fileID: 2181006961538866102, guid: acf969925f8713f42bd4ec4f8a50cf4e,
+    type: 3}
+--- !u!50 &-660033385601963743
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387323513821368845}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3636582353249190668
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,7 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8156541650356112635}
   - component: {fileID: 9132378728817512937}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: tover_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}

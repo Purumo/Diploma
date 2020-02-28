@@ -9,29 +9,26 @@ namespace GameScene.EnemiesModule
 {
     public class WaveSpawner : MonoBehaviour
     {
-        private const string
-            PathResourcesCharacters = "Enemies",
-            PathSceneEnemiesPool = "EnemiesPool",
-            PathSceneMovementBorder = "Movement/MovementBorder";
+        private const string PathResourcesCharacters = "Enemies";
 
         private Object[] spritesFromResource;
         private GameObject newEnemy;
 
-        private GameObject enemiesPool;
         private Vector2 spawnPoint;
 
         private int waveIndex = 0;
 
-        private float countdown = 3f;
-        public float timeBetweenWaves = 5.6f;//??
+        [HideInInspector]
+        public static float countdown = 3f;
+
+        public float timeBetweenWaves = 5.4f;//??
 
         public Text waveCountdownText;
+        public BoxCollider2D movementBorder;
 
         void Start()
         {
             spritesFromResource = Resources.LoadAll(PathResourcesCharacters).ToArray();
-            enemiesPool= GameObject.Find(PathSceneEnemiesPool);
-
         }
         void Update()
         {
@@ -63,16 +60,14 @@ namespace GameScene.EnemiesModule
             newEnemy = (GameObject)spritesFromResource[Random.Range(0, spritesFromResource.Length)];
 
             spawnPoint = SelectRandomSpawnPoint();
-            newEnemy = Instantiate(newEnemy, spawnPoint, Quaternion.identity, enemiesPool.transform);
+            newEnemy = Instantiate(newEnemy, spawnPoint, Quaternion.identity, gameObject.transform);//enemiesPool.transform
         }
         Vector2 SelectRandomSpawnPoint()
         {
             Vector2 spawnPoint;
-            GameObject movementBorder = GameObject.Find(PathSceneMovementBorder);
-            BoxCollider2D bc = movementBorder.GetComponent<BoxCollider2D>();
             float xFrom, xTo, yFrom, yTo;
-            xTo = (bc.offset.x + bc.size.x / 2) * bc.transform.localScale.x;
-            yTo = (bc.offset.y + bc.size.y / 2) * bc.transform.localScale.y;
+            xTo = (movementBorder.offset.x + movementBorder.size.x / 2) * movementBorder.transform.localScale.x;
+            yTo = (movementBorder.offset.y + movementBorder.size.y / 2) * movementBorder.transform.localScale.y;
             xFrom = -xTo;
             yFrom = -yTo;
             spawnPoint.x = Random.Range(xFrom, xTo);

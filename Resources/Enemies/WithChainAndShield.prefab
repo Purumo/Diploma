@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5727933535616994137}
   - component: {fileID: 1138619219901818629}
   - component: {fileID: -4024401222531053232}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WithChainAndShield
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,7 +90,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5505960801409013740}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
