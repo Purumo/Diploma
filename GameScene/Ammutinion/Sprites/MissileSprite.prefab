@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5774820169717985600}
+  - component: {fileID: -5001511028634064364}
   - component: {fileID: 8166212962144140531}
-  - component: {fileID: 6103795947251469114}
   - component: {fileID: 8725023666406897672}
   m_Layer: 13
   m_Name: MissileSprite
@@ -33,6 +33,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-5001511028634064364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8904316172016300671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff39006e6eabced4aae6333355e4fdcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &8166212962144140531
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -82,18 +94,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6103795947251469114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8904316172016300671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ca0e587418697945b63d5b22ad03b46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &8725023666406897672
 BoxCollider:
   m_ObjectHideFlags: 0

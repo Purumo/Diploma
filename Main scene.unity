@@ -1544,23 +1544,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd080ac98ec69e4428c0559d3894c2f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentBullet:
-    gameObject: {fileID: 0}
-    sprite: {fileID: 0}
-    icon: {fileID: 0}
+  bulletsPool: {fileID: 394470980}
+  effectsPool: {fileID: 296797425}
   bonusesPool: {fileID: 1392346882}
   bonusesPanelUI: {fileID: 1102029522}
   standartBullet:
-    gameObject: {fileID: 387323513821368845, guid: e23fbebbd756aa34793e274988132301,
+    CountdownText: {fileID: 0}
+    Object: {fileID: 387323513821368845, guid: e23fbebbd756aa34793e274988132301, type: 3}
+    Sprite: {fileID: 0}
+    Icon: {fileID: 0}
+    ImpactEffect: {fileID: 2181006961538866102, guid: acf969925f8713f42bd4ec4f8a50cf4e,
       type: 3}
-    sprite: {fileID: 0}
-    icon: {fileID: 0}
+    ActionTime: 5
+    Speed: 50
   missileBullet:
-    gameObject: {fileID: 2943544109705018411, guid: e813e9c097587d945af780d073d9b884,
+    CountdownText: {fileID: 0}
+    Object: {fileID: 2943544109705018411, guid: e813e9c097587d945af780d073d9b884,
       type: 3}
-    sprite: {fileID: 8904316172016300671, guid: 071c91c4cd035b8448df7737523555d0,
+    Sprite: {fileID: 8904316172016300671, guid: 071c91c4cd035b8448df7737523555d0,
       type: 3}
-    icon: {fileID: 3514651749857719993, guid: 8847fa12d6db7884dac89d5ee57944f9, type: 3}
+    Icon: {fileID: 3514651749857719993, guid: 8847fa12d6db7884dac89d5ee57944f9, type: 3}
+    ImpactEffect: {fileID: 8502708857418218753, guid: 0efa61e96a861ec4fb5aa6b4cce6d5f0,
+      type: 3}
+    ActionTime: 5
+    Speed: 50
+  explosionRadius: 1
+  currentBullet:
+    CountdownText: {fileID: 0}
+    Object: {fileID: 0}
+    Sprite: {fileID: 0}
+    Icon: {fileID: 0}
+    ImpactEffect: {fileID: 0}
+    ActionTime: 0
+    Speed: 0
 --- !u!1 &397094260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1869,6 +1885,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1884,6 +1901,22 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56666c5a40171f54783dd416a44f42bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 8192
+  m_MaxRayIntersections: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -2185,6 +2218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 740978961}
+  - component: {fileID: 740978962}
   m_Layer: 0
   m_Name: Bonuses
   m_TagString: Untagged
@@ -2207,6 +2241,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &740978962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740978960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0baebc238c8a4c49a4ec6dbdedae35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet:
+    CountdownText: {fileID: 0}
+    Object: {fileID: 0}
+    Sprite: {fileID: 0}
+    Icon: {fileID: 0}
+    ImpactEffect: {fileID: 0}
+    ActionTime: 0
+    Speed: 0
 --- !u!1001 &751710339
 PrefabInstance:
   m_ObjectHideFlags: 0

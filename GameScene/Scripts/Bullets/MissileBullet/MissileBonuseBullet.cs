@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace GameScene.BulletsModule
 {
-    public class StandartBullet : MonoBehaviour, IMovableBullet
+    public class MissileBonuseBullet : MonoBehaviour, IMovableBullet
     {
         private Vector3 dir;
         private Rigidbody2D rb;
@@ -15,12 +15,11 @@ namespace GameScene.BulletsModule
         void Awake()
         {
             rb = GetComponent<Rigidbody2D>();
-            bullet = new Bullet(BulletsController.GetInstance().standartBullet);
+            bullet = new Bullet(MissileController.GetInstance().bullet);
         }
         protected void Update()
         {
             rb.AddForce(dir * bullet.Speed * Time.deltaTime);
-
             Destroy(gameObject, bullet.LifeTime);
         }
         public void Seek(Vector3 direction)
@@ -31,16 +30,26 @@ namespace GameScene.BulletsModule
         public void OnCollisionEnter2D(Collision2D collision)
         {
             float rotX = dir.x != 0 ? dir.x * -90 : (dir.y + 1) * -90;
-            Vector4 vec = new Vector4(rotX, 90, 45, 1);
+            Vector4 vec = new Vector4(rotX, 0, 0, 1);
             GameObject effectIns = Instantiate(bullet.ImpactEffect, transform.position,
-                Quaternion.Euler(vec), transform.parent.GetChild(0));//?
+                Quaternion.Euler(vec), BulletsController.GetInstance().effectsPool);
 
             float lifeTime = bullet.ImpactEffect.GetComponent<ParticleSystem>().main.startLifetimeMultiplier;
             Destroy(effectIns, lifeTime);
 
-            Destroy(collision.gameObject);
+            Explode();
 
             Destroy(gameObject);
+        }
+        void Explode()
+        {
+            //reqiures in refactoring
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position,
+                BulletsController.GetInstance().explosionRadius, BulletsController.layerMaskEnemy);
+            foreach (Collider2D collider in colliders)
+            {
+                Destroy(collider.gameObject);
+            }
         }
     }
 }

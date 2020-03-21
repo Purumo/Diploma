@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using GameScene.BulletsModule;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -36,8 +37,8 @@ namespace GameScene.TurretsModule
         public override void Left() { }
         public override void Shoot()
         {
-            BulletShoot(TurretsController.GetInstance().leftTurret);
-            BulletShoot(TurretsController.GetInstance().rightTurret);
+            BulletsController.Shoot(TurretsController.GetInstance().leftTurret);
+            BulletsController.Shoot(TurretsController.GetInstance().rightTurret);
         }
         public override void Switching()
         {

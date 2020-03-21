@@ -35,7 +35,6 @@ namespace GameScene.EnemiesModule
                 StartCoroutine(SpawnWave());
                 countdown = timeBetweenWaves;
             }
-
             countdown -= Time.deltaTime;
 
             waveCountdownText.text = Mathf.Round(countdown).ToString();

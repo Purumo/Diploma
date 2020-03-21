@@ -11,8 +11,7 @@ namespace GameScene.EnemiesModule
         private int wavepointIndex = 0;
         private Vector3 direction;
 
-        [HideInInspector]
-        public int[] moveTrajectory;
+        [HideInInspector] public int[] moveTrajectory;
         public float moveSpeed = 1f;
 
         void Start()
@@ -38,7 +37,7 @@ namespace GameScene.EnemiesModule
                 GetComponent<Rigidbody2D>().Sleep();
                 GetComponent<Collider2D>().enabled = false;
 
-                Destroy(gameObject, 120f);
+                Destroy(gameObject, 60f);
             }
         }
         

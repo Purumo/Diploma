@@ -7,96 +7,111 @@ using UnityEngine.UI;
 
 namespace GameScene.BulletsModule
 {
-    //[System.Serializable]
-    //public struct Bullet
-    //{
-    //    public GameObject gameObject;
-    //    //public GameObject impactEffect;
-    //}
+    /*public interface IBonuseSprite
+    {
+        void CallSprite(Bullet bonuseBullet);
+    }*/
+    public interface IMovableBullet
+    {
+        void Seek(Vector3 direction);
+    }
     [System.Serializable]
     public struct Bullet
     {
-        public GameObject gameObject;
-        public GameObject sprite;
-        public GameObject icon;
-        public float actionTime;
-        //public Text countdownText;
+        public readonly float LifeTime;
+        [HideInInspector] public Text CountdownText;
+        public GameObject Object;
+        public GameObject Sprite;
+        public GameObject Icon;
+        public GameObject ImpactEffect;
+        public float ActionTime;
+        public float Speed;
+
+        public Bullet(Bullet bullet)
+        {
+            Object = bullet.Object;
+            Sprite = bullet.Sprite;
+            Icon = bullet.Icon;
+            ActionTime = bullet.ActionTime;
+            ImpactEffect = bullet.ImpactEffect;
+            Speed = bullet.Speed;
+
+            CountdownText = null;
+            
+            LifeTime = 10f;
+            ActionTime = 8f;
+            Speed = 50f;
+        }
     }
     public class BulletsController : MonoBehaviour
     {
         private static BulletsController instance;
 
-        [HideInInspector]
-        public Bullet currentBullet;
-        private static Turret turret;
-        private static Transform bulletsPool;
+        [HideInInspector] public const int layerMaskEnemy = 1 << 10;
 
-        private float countdown;
-        private float timeBetweenMissileBonuse = 6f;//
+        private float bonuseCountdown;
+        private float timeBetweenBonuse = 4f;
+
+        [Header("Unity Setup Fields")]
+        public Transform bulletsPool;
+        public Transform effectsPool;
 
         public Transform bonusesPool;
-        public Transform bonusesPanelUI;/// 
+        public Transform bonusesPanelUI;
 
+        [Header("Standart bullet")]
         public Bullet standartBullet;
+
+        [Header("Missile bonuse bullet")]
         public Bullet missileBullet;
+        //need to set borders
+        public float explosionRadius = 1f;
+        
+        [HideInInspector] public Bullet currentBullet;
 
         void Awake()
         {
             instance = this;
 
-            currentBullet = standartBullet;
-            bulletsPool = transform;
-            countdown = WaveSpawner.countdown + timeBetweenMissileBonuse;
+            currentBullet = new Bullet(standartBullet);
+            bonuseCountdown = WaveSpawner.countdown + timeBetweenBonuse;
         }
         void Update()
         {
-            if (countdown <= 0f)
+            if (bonuseCountdown <= 0f)
             {
-                SpawnMissileBonuse();
-                countdown = timeBetweenMissileBonuse;
+                SpawnBonuse();
+                bonuseCountdown = timeBetweenBonuse;
             }
-
-            countdown -= Time.deltaTime;
-
-            //missileCountdownText.text = Mathf.Round(countdown).ToString();
-        }
-        void SpawnMissileBonuse()//
-        {
-            float xTo = TurretsController.GetInstance().rightTurret.gameObject.transform.position.x;
-            float yTo = TurretsController.GetInstance().topTurret.gameObject.transform.position.y;
-            Vector2 spawnPoint = WaveSpawner.SelectRandomRectangleSpawnPoint(-xTo, xTo, -yTo, yTo);
-
-            GameObject bornedSprite = Instantiate(missileBullet.sprite, spawnPoint, Quaternion.identity, bonusesPool);
-            MissileSprite missileSprite = bornedSprite.GetComponent<MissileSprite>();
-            missileSprite.CallSprite(missileBullet);
+            bonuseCountdown -= Time.deltaTime;
         }
         public static BulletsController GetInstance()
         {
             return instance;
         }
-        /*public static void EnableMissileBonuse()
+        public void ResetBullet()
         {
-            currentBullet = missileBullet;
-        }*/
-
-        //standart bullet functions
-        public static void Call(Turret turret)
-        {
-            BulletsController.turret = turret;
-            Shoot();
+            currentBullet = new Bullet(standartBullet);
         }
-        static void Shoot()
+        public static void Shoot(Turret turret)
         {
             Vector3 dir = turret.firePoint.position - turret.gameObject.transform.position;
 
             GameObject bullet = Instantiate(
-                GetInstance().currentBullet.gameObject, turret.firePoint.position, turret.firePoint.rotation, bulletsPool);
+                GetInstance().currentBullet.Object, turret.firePoint.position, turret.firePoint.rotation, GetInstance().bulletsPool);
             IMovableBullet movableBullet = bullet.GetComponent<IMovableBullet>();
-            movableBullet.Seek(dir, GetInstance().currentBullet);
+            movableBullet.Seek(dir);
         }
-        public void ResetBullet()
+        void SpawnBonuse()
         {
-            currentBullet = standartBullet;
+            float xTo = TurretsController.GetInstance().rightTurret.gameObject.transform.position.x;
+            float yTo = TurretsController.GetInstance().topTurret.gameObject.transform.position.y;
+            Vector2 spawnPoint = WaveSpawner.SelectRandomRectangleSpawnPoint(-xTo, xTo, -yTo, yTo);
+
+            //GameObject bornedSprite = 
+            Instantiate(missileBullet.Sprite, spawnPoint, Quaternion.identity, bonusesPool);
+            //IBonuseSprite bonuseSprite = bornedSprite.GetComponent<IBonuseSprite>();
+            //bonuseSprite.CallSprite(missileBullet);
         }
     }
 }
