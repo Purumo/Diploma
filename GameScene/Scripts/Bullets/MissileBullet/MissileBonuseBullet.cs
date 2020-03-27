@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using GameScene.EnemiesModule;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -46,9 +47,11 @@ namespace GameScene.BulletsModule
             //reqiures in refactoring
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position,
                 BulletsController.GetInstance().explosionRadius, BulletsController.layerMaskEnemy);
+            Enemy enemy;
             foreach (Collider2D collider in colliders)
             {
-                Destroy(collider.gameObject);
+                enemy = collider.gameObject.GetComponent<Enemy>();
+                enemy.TakeDamage(bullet.Damage);
             }
         }
     }

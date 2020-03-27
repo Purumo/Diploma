@@ -2,22 +2,30 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace GameScene.EnemiesModule
 {
-    public class EnemyController : MonoBehaviour
+    public class Enemy : MonoBehaviour
     {
         private Transform currentTarget;
         private int wavepointIndex = 0;
         private Vector3 direction;
+        private Image healthBar;
+        private float health;
+
 
         [HideInInspector] public int[] moveTrajectory;
         public float moveSpeed = 1f;
+        public float startHealth = 13;
 
         void Start()
         {
             moveTrajectory = EnemyMovement.moveTrajectories[Random.Range(0, EnemyMovement.moveTrajectories.Length)];
             currentTarget = EnemyMovement.movementPoints[moveTrajectory[0]];
+
+            healthBar = GetComponentsInChildren<Image>()[1];
+            health = startHealth;
         }
 
         void Update()
@@ -51,6 +59,18 @@ namespace GameScene.EnemiesModule
             else
             {
                 currentTarget = EnemyMovement.movementPoints[moveTrajectory[wavepointIndex]];
+            }
+        }
+
+        public void TakeDamage(int amount)
+        {
+            health -= amount;
+
+            healthBar.fillAmount = health / startHealth;
+
+            if(health <= 0)
+            {
+                Destroy(gameObject);
             }
         }
     }

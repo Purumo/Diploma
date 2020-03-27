@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using GameScene.EnemiesModule;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -38,7 +39,8 @@ namespace GameScene.BulletsModule
             float lifeTime = bullet.ImpactEffect.GetComponent<ParticleSystem>().main.startLifetimeMultiplier;
             Destroy(effectIns, lifeTime);
 
-            Destroy(collision.gameObject);
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            enemy.TakeDamage(bullet.Damage);
 
             Destroy(gameObject);
         }

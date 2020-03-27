@@ -26,21 +26,20 @@ namespace GameScene.BulletsModule
         public GameObject ImpactEffect;
         public float ActionTime;
         public float Speed;
+        public int Damage;
 
         public Bullet(Bullet bullet)
         {
             Object = bullet.Object;
             Sprite = bullet.Sprite;
             Icon = bullet.Icon;
-            ActionTime = bullet.ActionTime;
             ImpactEffect = bullet.ImpactEffect;
+            ActionTime = bullet.ActionTime;
             Speed = bullet.Speed;
+            Damage = bullet.Damage;
 
-            CountdownText = null;
-            
-            LifeTime = 10f;
-            ActionTime = 8f;
-            Speed = 50f;
+            CountdownText = null;            
+            LifeTime = 10f;//
         }
     }
     public class BulletsController : MonoBehaviour
