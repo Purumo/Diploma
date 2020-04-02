@@ -54,6 +54,7 @@ namespace GameScene.EnemiesModule
             wavepointIndex++;
             if (wavepointIndex >= moveTrajectory.Length)
             {
+                WaveSpawner.EnemiesAlive--;
                 return;
             }
             else
@@ -70,8 +71,14 @@ namespace GameScene.EnemiesModule
 
             if(health <= 0)
             {
-                Destroy(gameObject);
+                Die();
             }
+        }
+        void Die()
+        {
+            WaveSpawner.EnemiesAlive--;
+
+            Destroy(gameObject);
         }
     }
 }

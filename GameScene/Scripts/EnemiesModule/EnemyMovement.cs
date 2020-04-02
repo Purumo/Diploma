@@ -20,7 +20,7 @@ namespace GameScene.EnemiesModule
             moveTrajectories[3] = new int[7] { 6, 5, 4, 9, 2, 1, 11 };
 
             movementPoints = new Transform[transformMovementPoints.childCount];
-            for(int i=0; i< movementPoints.Length; i++)
+            for (int i = 0; i < movementPoints.Length; i++)
             {
                 movementPoints[i] = transformMovementPoints.GetChild(i);
             }

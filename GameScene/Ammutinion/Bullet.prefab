@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4082184447462396611}
   - component: {fileID: -660033385601963743}
   - component: {fileID: 2928480578042305206}
-  - component: {fileID: -1888587887614376770}
+  - component: {fileID: 6901996159386589917}
   m_Layer: 12
   m_Name: Bullet
   m_TagString: Untagged
@@ -150,7 +150,7 @@ PolygonCollider2D:
       - {x: 0.7180225, y: -2.9458787}
       - {x: 2.3023343, y: -2.6760464}
       - {x: 1.6230692, y: -1.9918417}
---- !u!114 &-1888587887614376770
+--- !u!114 &6901996159386589917
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 387323513821368845}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cb8b536722dff446a91cbe4edfde392, type: 3}
+  m_Script: {fileID: 11500000, guid: 652355832f4f4d04fb45e24a50e2f2ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3636582353249190668

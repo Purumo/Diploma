@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace GameScene.BulletsModule
 {
-    public class MissileBonuseBullet : MonoBehaviour, IMovableBullet
+    public class MovableBullet : MonoBehaviour//, IMovableBullet
     {
         private Vector3 dir;
         private Rigidbody2D rb;
@@ -16,37 +16,52 @@ namespace GameScene.BulletsModule
         void Awake()
         {
             rb = GetComponent<Rigidbody2D>();
-            bullet = new Bullet(MissileController.GetInstance().bullet);
+            bullet = new Bullet(BulletsController.GetInstance().currentBullet);
         }
         protected void Update()
         {
             rb.AddForce(dir * bullet.Speed * Time.deltaTime);
             Destroy(gameObject, bullet.LifeTime);
         }
-        public void Seek(Vector3 direction)
+        public void Seek(Vector3 direction, Bullet bullet)
         {
             dir = direction.normalized;
+            this.bullet = new Bullet(bullet);
         }
 
         public void OnCollisionEnter2D(Collision2D collision)
         {
-            float rotX = dir.x != 0 ? dir.x * -90 : (dir.y + 1) * -90;
-            Vector4 vec = new Vector4(rotX, 0, 0, 1);
+            //Quaternion.Euler(vec)
+            //St
+            //float rotX = dir.x != 0 ? dir.x * -90 : (dir.y + 1) * -90;
+            //Vector4 vec = new Vector4(rotX, 90, 45, 1);
+            //NonSt
+            //float rotX = dir.x != 0 ? dir.x * -90 : (dir.y + 1) * -90;
+            //Vector4 vec = new Vector4(rotX, 0, 0, 1);
+
             GameObject effectIns = Instantiate(bullet.ImpactEffect, transform.position,
-                Quaternion.Euler(vec), BulletsController.GetInstance().effectsPool);
+                Quaternion.identity, BulletsController.GetInstance().effectsPool);
 
             float lifeTime = bullet.ImpactEffect.GetComponent<ParticleSystem>().main.startLifetimeMultiplier;
             Destroy(effectIns, lifeTime);
 
-            Explode();
+            if(bullet.ExplosionRadius == 0)
+            {
+                Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+                enemy.TakeDamage(bullet.Damage);
+            }
+            else
+            {
+                Damage();
+            }
 
             Destroy(gameObject);
         }
-        void Explode()
+        void Damage()//Explode
         {
             //reqiures in refactoring
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position,
-                BulletsController.GetInstance().explosionRadius, BulletsController.layerMaskEnemy);
+                bullet.ExplosionRadius, BulletsController.layerMaskEnemy);
             Enemy enemy;
             foreach (Collider2D collider in colliders)
             {
