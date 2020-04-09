@@ -11,26 +11,28 @@ namespace GameScene.TurretsModule
 
         public HorizontalState(TurretsController controller) : base(controller)
         {
-            rigidbodyTurretsHorizontal = controller.turretsHorizontal.GetComponent<Rigidbody2D>();
-            rigidbodyTurretsHorizontal.WakeUp();
+            rigidbodyTurretsHorizontal = controller.turretsHorizontal;//.GetComponent<Rigidbody2D>();
+            controller.varSpeed = controller.MoveTurretsSpeed;
+            //rigidbodyTurretsHorizontal.WakeUp();
         }
         public override void Move()
         {
-            if (!rigidbodyTurretsHorizontal.IsSleeping())
-            {
-                //need to try velocity for deleting move limits
-                rigidbodyTurretsHorizontal.AddForce(currentDirection * controller.MoveTurretsSpeed);
-            }
+            //if (!rigidbodyTurretsHorizontal.IsSleeping())
+            //{
+                rigidbodyTurretsHorizontal.velocity = controller.varSpeed * currentDirection;
+            //}
         }
-        public override void Sleep() => rigidbodyTurretsHorizontal.Sleep();
+        public override void Sleep() => controller.varSpeed = 0;//rigidbodyTurretsHorizontal.Sleep();
         public override void Up()
         {
-            rigidbodyTurretsHorizontal.WakeUp();
+            //rigidbodyTurretsHorizontal.WakeUp();
+            controller.varSpeed = controller.MoveTurretsSpeed;
             currentDirection = Vector3.up;
         }
         public override void Down()
         {
-            rigidbodyTurretsHorizontal.WakeUp();
+            //rigidbodyTurretsHorizontal.WakeUp();
+            controller.varSpeed = controller.MoveTurretsSpeed;
             currentDirection = Vector3.down;
         }
         public override void Right() { }

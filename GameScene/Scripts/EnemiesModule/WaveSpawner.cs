@@ -16,11 +16,6 @@ namespace GameScene.EnemiesModule
     }
     public class WaveSpawner : MonoBehaviour
     {
-        //private const string PathResourcesCharacters = "Enemies";
-
-        //private Object[] spritesFromResource;
-        //private GameObject newEnemy;
-
         private int waveIndex = 0;
 
         public static float countdown;// = 3f;
@@ -36,8 +31,6 @@ namespace GameScene.EnemiesModule
 
         void Awake()
         {
-            //spritesFromResource = Resources.LoadAll(PathResourcesCharacters).ToArray();
-
             countdown = 3f;
             roundsPassed = 0;
             EnemiesAlive = 0;

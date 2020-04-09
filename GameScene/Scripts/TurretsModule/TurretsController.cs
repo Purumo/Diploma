@@ -22,16 +22,17 @@ namespace GameScene.TurretsModule
         //[Header("Unity Setup Fields")]
         //public Transform bulletPool;
         //public GameObject bulletPrefab;
+        [HideInInspector] public float varSpeed;
 
         [Header("Attributes")]
         public float MoveTurretsSpeed = 3f;
 
         [Header("Horizontal turrets Setup")]
-        public GameObject turretsHorizontal;
+        public Rigidbody2D turretsHorizontal;
         public Turret rightTurret, leftTurret;
 
         [Header("Vertical turrets Setup")]
-        public GameObject turretsVertical;
+        public Rigidbody2D turretsVertical;
         public Turret topTurret, botTurret;
 
 
@@ -40,11 +41,13 @@ namespace GameScene.TurretsModule
         {
             instance = this;
 
+            varSpeed = MoveTurretsSpeed;
+
             countdown = WaveSpawner.countdown;
 
             SetState(new HorizontalState(this));
         }
-        void Update()
+        void FixedUpdate()
         {
             if (countdown >= 0)
             {

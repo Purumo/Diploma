@@ -266,8 +266,8 @@ GameObject:
   - component: {fileID: 2979551830821852811}
   - component: {fileID: 5416104613303741565}
   - component: {fileID: 691995827515372275}
-  - component: {fileID: 4810670965097551726}
   - component: {fileID: -2549288631802449550}
+  - component: {fileID: 3715093169172169051}
   - component: {fileID: -1244491818632564366}
   m_Layer: 10
   m_Name: WithAnAx
@@ -418,27 +418,6 @@ PolygonCollider2D:
       - {x: -0.255, y: -0.089999996}
       - {x: -0.195, y: -0.04}
       - {x: -0.205, y: 0}
---- !u!50 &4810670965097551726
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7937307173563698518}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!114 &-2549288631802449550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,12 +427,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 7937307173563698518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7eec8a5a135e404c8caae4bf0aefbf4, type: 3}
+  m_Script: {fileID: 11500000, guid: e6b8ea48d5cd8ca4dad1068d1449321e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowActionTime: 0
+  varSpeed: 0
+  speed: 2
+  health: 13
+--- !u!114 &3715093169172169051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7937307173563698518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46f0a13a47cee5d428ec48ef41fe2c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveTrajectory: 
-  moveSpeed: 3
-  startHealth: 13
 --- !u!114 &-1244491818632564366
 MonoBehaviour:
   m_ObjectHideFlags: 0

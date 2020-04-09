@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    private static PauseMenu instance;
     public GameObject ui;
+    private void Start()
+    {
+        instance = this;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
@@ -28,11 +33,16 @@ public class PauseMenu : MonoBehaviour
     }
     public void Retry()
     {
-        Toggle();//
+        Toggle();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void Menu()
     {
+        Toggle();
         SceneManager.LoadScene(MainMenu.mainMenu);
+    }
+    public static PauseMenu GetInstance()
+    {
+        return instance;
     }
 }

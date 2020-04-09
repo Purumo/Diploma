@@ -119,8 +119,8 @@ GameObject:
   - component: {fileID: 3468352643643083696}
   - component: {fileID: 4503172458543891215}
   - component: {fileID: 7909091924096457592}
-  - component: {fileID: 2742100356318126924}
   - component: {fileID: -5920443375771648983}
+  - component: {fileID: 2779236116126775282}
   m_Layer: 10
   m_Name: WithSwordAndHorns
   m_TagString: Enemy
@@ -248,27 +248,6 @@ PolygonCollider2D:
       - {x: 0.065, y: -0.94}
       - {x: 0.21499999, y: -0.96}
       - {x: 0.235, y: -0.91999996}
---- !u!50 &2742100356318126924
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8428307096549821076}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!114 &-5920443375771648983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,12 +257,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 8428307096549821076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7eec8a5a135e404c8caae4bf0aefbf4, type: 3}
+  m_Script: {fileID: 11500000, guid: e6b8ea48d5cd8ca4dad1068d1449321e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowActionTime: 0
+  varSpeed: 0
+  speed: 3
+  health: 13
+--- !u!114 &2779236116126775282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8428307096549821076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46f0a13a47cee5d428ec48ef41fe2c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveTrajectory: 
-  moveSpeed: 3
-  startHealth: 13
 --- !u!1 &8650380951249620638
 GameObject:
   m_ObjectHideFlags: 0

@@ -34,4 +34,15 @@ public class GameManager : MonoBehaviour
 	{
 		return instance;
 	}
+	//void OnAplicationFocus(bool hasFocus)
+	//{
+	//	//if (!hasFocus)
+	//	//{
+	//		PauseMenu.GetInstance().Toggle();
+	//	//}
+	//}
+	//void OnApplicationPause(bool isPaused)
+	//{
+	//	PauseMenu.GetInstance().Toggle();
+	//}
 }

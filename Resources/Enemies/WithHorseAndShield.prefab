@@ -266,8 +266,8 @@ GameObject:
   - component: {fileID: 2211132947238272634}
   - component: {fileID: 3990120727169950005}
   - component: {fileID: 3543814378795875009}
-  - component: {fileID: 7854569651118054321}
   - component: {fileID: 4370381209164701064}
+  - component: {fileID: -3303406769597675520}
   m_Layer: 10
   m_Name: WithHorseAndShield
   m_TagString: Enemy
@@ -404,27 +404,6 @@ PolygonCollider2D:
       - {x: -0.035, y: -1.5}
       - {x: 0.375, y: -1.5}
       - {x: 0.415, y: -1.4599999}
---- !u!50 &7854569651118054321
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7584665572185578611}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!114 &4370381209164701064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,9 +413,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 7584665572185578611}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7eec8a5a135e404c8caae4bf0aefbf4, type: 3}
+  m_Script: {fileID: 11500000, guid: e6b8ea48d5cd8ca4dad1068d1449321e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowActionTime: 0
+  varSpeed: 0
+  speed: 3
+  health: 13
+--- !u!114 &-3303406769597675520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7584665572185578611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46f0a13a47cee5d428ec48ef41fe2c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveTrajectory: 
-  moveSpeed: 3
-  startHealth: 13
