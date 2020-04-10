@@ -6,10 +6,10 @@ using GameScene.Settings;
 public class GameManager : MonoBehaviour
 {
 	private static GameManager instance;
-	[HideInInspector] public int layerIdxTower;
-	[HideInInspector] public int layerIdxEnemy;
+	private int layerIdxTower;
+	private int layerIdxEnemy;
 
-	[HideInInspector] public bool GameIsOver;
+	private bool GameIsOver;
 
 	public GameObject gameOverUI;
 
@@ -29,16 +29,31 @@ public class GameManager : MonoBehaviour
 	{
 		if (GameIsOver)
 			return;
+
+		if (!Application.isFocused)
+		{
+			PauseMenu.GetInstance().Toggle();
+		}
 	}
 	public static GameManager GetInstance()
 	{
 		return instance;
 	}
+	public void FinishGame()
+	{
+		//uncomment to have a GameOver
+		//GameIsOver = true;
+		//gameOverUI.SetActive(true);
+
+		Physics2D.IgnoreLayerCollision(
+			layerIdxTower, layerIdxEnemy, true);
+	}
+
 	//void OnAplicationFocus(bool hasFocus)
 	//{
 	//	//if (!hasFocus)
 	//	//{
-	//		PauseMenu.GetInstance().Toggle();
+	//	PauseMenu.GetInstance().Toggle();
 	//	//}
 	//}
 	//void OnApplicationPause(bool isPaused)
