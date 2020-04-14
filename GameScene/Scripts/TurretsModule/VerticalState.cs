@@ -14,6 +14,9 @@ namespace GameScene.TurretsModule
             rigidbodyTurretsVertical = controller.turretsVertical;//controller.turretsVertical.GetComponent<Rigidbody2D>();
             controller.varSpeed = controller.MoveTurretsSpeed;
             //rigidbodyTurretsVertical.WakeUp();
+
+            controller.horizCanvasGroup.alpha = 0.5f;
+            controller.verticalCanvasGroup.alpha = 1f;
         }
         public override void Move()
         {

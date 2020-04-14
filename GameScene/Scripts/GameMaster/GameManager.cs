@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using GameScene.Settings;
+//using GameScene.Settings;
+using GameScene.GameMaster;
 
 public class GameManager : MonoBehaviour
 {
 	private static GameManager instance;
 	private int layerIdxTower;
 	private int layerIdxEnemy;
-
 	private bool GameIsOver;
 
 	public GameObject gameOverUI;
@@ -29,11 +29,6 @@ public class GameManager : MonoBehaviour
 	{
 		if (GameIsOver)
 			return;
-
-		if (!Application.isFocused)
-		{
-			PauseMenu.GetInstance().Toggle();
-		}
 	}
 	public static GameManager GetInstance()
 	{
@@ -48,16 +43,9 @@ public class GameManager : MonoBehaviour
 		Physics2D.IgnoreLayerCollision(
 			layerIdxTower, layerIdxEnemy, true);
 	}
-
-	//void OnAplicationFocus(bool hasFocus)
-	//{
-	//	//if (!hasFocus)
-	//	//{
-	//	PauseMenu.GetInstance().Toggle();
-	//	//}
-	//}
-	//void OnApplicationPause(bool isPaused)
-	//{
-	//	PauseMenu.GetInstance().Toggle();
-	//}
+	void OnApplicationFocus(bool isFocused)
+	{
+		if (!isFocused)
+			PauseMenu.GetInstance().Toggle();
+	}
 }

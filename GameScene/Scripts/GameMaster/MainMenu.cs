@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+namespace GameScene.GameMaster
 {
-	public string levelToLoad = "MainLevel";
-	public static string mainMenu = "MainMenu";
-
-	public void Play()
+	public class MainMenu : MonoBehaviour
 	{
-		SceneManager.LoadScene(levelToLoad);
-	}
+		public string levelToLoad = "MainLevel";
+		public static string mainMenu = "MainMenu";
 
-	public void Quit()
-	{
-		//Debug.Log("Exiting...");
-		Application.Quit();
+		public void Play()
+		{
+			SceneManager.LoadScene(levelToLoad);
+		}
+
+		public void Quit()
+		{
+			//add exit choice here
+			Application.Quit();
+		}
 	}
 }

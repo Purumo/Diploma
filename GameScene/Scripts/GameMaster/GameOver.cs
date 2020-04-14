@@ -5,23 +5,26 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameOver : MonoBehaviour
+namespace GameScene.GameMaster
 {
-	public Text roundsText;
-
-	void OnEnable()
+	public class GameOver : MonoBehaviour
 	{
-		roundsText.text = WaveSpawner.roundsPassed.ToString();
-	}
+		public Text roundsText;
 
-	public void Retry()
-	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-	}
+		void OnEnable()
+		{
+			roundsText.text = WaveSpawner.roundsPassed.ToString();
+		}
 
-	public void Menu()
-	{
-		SceneManager.LoadScene(MainMenu.mainMenu);
-	}
+		public void Retry()
+		{
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		}
 
+		public void Menu()
+		{
+			SceneManager.LoadScene(MainMenu.mainMenu);
+		}
+
+	}
 }

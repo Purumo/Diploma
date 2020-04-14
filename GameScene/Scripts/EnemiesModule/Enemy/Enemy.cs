@@ -10,10 +10,8 @@ namespace GameScene.EnemiesModule
     {
         private Image healthBar;
         private float varHealth;
-        //[HideInInspector] 
-        public float slowActionTime;
-        //[HideInInspector] 
-        public float varSpeed;
+        [HideInInspector] public float slowActionTime;
+        [HideInInspector] public float varSpeed;
 
         public float speed = 2.5f;
         public float health = 13;

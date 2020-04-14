@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using GameScene.Effects;
+//using GameScene.Effects;
 
 namespace GameScene.BulletsModule
 {
@@ -44,13 +44,13 @@ namespace GameScene.BulletsModule
             */
             #endregion
 
-            GameObject effectIns = Instantiate(bullet.ImpactEffect, transform.position,
-                Quaternion.identity, BulletsController.GetInstance().effectsPool);
+            //GameObject effectIns = Instantiate(bullet.ImpactEffect, transform.position,
+            //    Quaternion.identity, BulletsController.GetInstance().effectsPool);
 
-            float lifeTime = bullet.ImpactEffect.GetComponent<ParticleSystem>().main.startLifetimeMultiplier;
-            Destroy(effectIns, lifeTime);
+            //float lifeTime = bullet.ImpactEffect.GetComponent<ParticleSystem>().main.startLifetimeMultiplier;
+            //Destroy(effectIns, lifeTime);
 
-            if(bullet.ExplosionRadius <= 0)
+            if (bullet.ExplosionRadius <= 0)
             {
                 Enemy enemy = collision.gameObject.GetComponent<Enemy>();
                 enemy.TakeDamage(bullet.Damage);

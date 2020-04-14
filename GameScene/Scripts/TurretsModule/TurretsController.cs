@@ -17,11 +17,12 @@ namespace GameScene.TurretsModule
     {
         private static TurretsController instance;
 
-        private float countdown;
+        //private float countdown;
 
         //[Header("Unity Setup Fields")]
         //public Transform bulletPool;
         //public GameObject bulletPrefab;
+
         [HideInInspector] public float varSpeed;
 
         [Header("Attributes")]
@@ -29,10 +30,12 @@ namespace GameScene.TurretsModule
 
         [Header("Horizontal turrets Setup")]
         public Rigidbody2D turretsHorizontal;
+        public CanvasGroup horizCanvasGroup;
         public Turret rightTurret, leftTurret;
 
         [Header("Vertical turrets Setup")]
         public Rigidbody2D turretsVertical;
+        public CanvasGroup verticalCanvasGroup;
         public Turret topTurret, botTurret;
 
 
@@ -43,21 +46,21 @@ namespace GameScene.TurretsModule
 
             varSpeed = MoveTurretsSpeed;
 
-            countdown = WaveSpawner.countdown;
+            //countdown = WaveSpawner.countdown;
 
             SetState(new HorizontalState(this));
         }
         void FixedUpdate()
         {
-            if (countdown >= 0)
-            {
-                countdown -= Time.deltaTime;
-                return;
-            }
-            else
-            {
+            //if (countdown > 0)
+            //{
+            //    countdown -= Time.deltaTime;
+            //    return;
+            //}
+            //else
+            //{
                 currentState.Move();
-            }
+            //}
         }
 
         public static TurretsController GetInstance()

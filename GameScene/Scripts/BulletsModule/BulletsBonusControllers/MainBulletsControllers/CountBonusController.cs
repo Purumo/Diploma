@@ -23,7 +23,7 @@ namespace GameScene.BulletsModule
 
         void Start()
         {
-            bonuseCountdown = WaveSpawner.countdown + timeBetweenBonuse;
+            bonuseCountdown = timeBetweenBonuse;
         }
         void Update()
         {
@@ -54,9 +54,10 @@ namespace GameScene.BulletsModule
                 icon = Instantiate(bullet.Icon, BulletsController.GetInstance().bonusesPanelUI);
             }
 
-            bullet.CountdownText = icon.GetComponentInChildren<Text>();
-
+            icon.transform.SetAsFirstSibling();
             countdownActionCount = ActionCount;
+
+            bullet.CountdownText = icon.GetComponentInChildren<Text>();
             bullet.CountdownText.text = countdownActionCount.ToString();
         }
 

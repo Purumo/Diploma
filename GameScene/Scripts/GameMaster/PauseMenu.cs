@@ -3,46 +3,59 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+namespace GameScene.GameMaster
 {
-    private static PauseMenu instance;
-    public GameObject ui;
-    private void Start()
+    public class PauseMenu : MonoBehaviour
     {
-        instance = this;
-    }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
-        {
-            Toggle();
-        }        
-    }
-    public void Toggle()
-    {
-        ui.SetActive(!ui.activeSelf);
+        private static PauseMenu instance;
 
-        if (ui.activeSelf)
+        public GameObject ui;
+        public GameObject delayUi;
+
+        private void Start()
         {
-            Time.timeScale = 0f;
+            //Time.timeScale = 1f;
+            instance = this;
         }
-        else
+        void Update()
         {
-            Time.timeScale = 1f;
+            //to delete on build
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Toggle();
+            }
         }
-    }
-    public void Retry()
-    {
-        Toggle();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-    public void Menu()
-    {
-        Toggle();
-        SceneManager.LoadScene(MainMenu.mainMenu);
-    }
-    public static PauseMenu GetInstance()
-    {
-        return instance;
+        public void Toggle()
+        {
+            ui.SetActive(!ui.activeSelf);
+
+            if (delayUi.activeSelf)
+            {
+                delayUi.SetActive(false);
+            }
+
+            if (ui.activeSelf)
+            {
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                delayUi.SetActive(true);
+            }
+        }
+        public void Retry()
+        {
+            //Toggle();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        public void Menu()
+        {
+            //Toggle();
+            SceneManager.LoadScene(MainMenu.mainMenu);
+        }
+        public static PauseMenu GetInstance()
+        {
+            return instance;
+        }
     }
 }

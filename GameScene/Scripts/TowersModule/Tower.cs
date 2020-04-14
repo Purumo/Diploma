@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tower : MonoBehaviour
+namespace GameScene.Tower
 {
-    public void OnCollisionEnter2D(Collision2D collision)
+    public class Tower : MonoBehaviour
     {
-        GameManager.GetInstance().FinishGame();
+        public void OnCollisionEnter2D(Collision2D collision)
+        {
+            GameManager.GetInstance().FinishGame();
+        }
     }
 }

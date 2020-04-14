@@ -17,8 +17,8 @@ namespace GameScene.EnemiesModule
     public class WaveSpawner : MonoBehaviour
     {
         private int waveIndex = 0;
+        private float countdown = 0;
 
-        public static float countdown;// = 3f;
         public static int roundsPassed;
         public static int EnemiesAlive;// = 0;
 
@@ -29,9 +29,8 @@ namespace GameScene.EnemiesModule
         public Text waveCountdownText;
         public BoxCollider2D movementBorder;
 
-        void Awake()
+        void Start()
         {
-            countdown = 3f;
             roundsPassed = 0;
             EnemiesAlive = 0;
         }

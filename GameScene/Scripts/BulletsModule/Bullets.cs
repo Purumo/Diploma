@@ -17,6 +17,7 @@ namespace GameScene.BulletsModule
     public class Bullet
     {
         [HideInInspector] public Text CountdownText;
+        public string Name;
         public GameObject Object;
         public GameObject ImpactEffect;
         public float ExplosionRadius;
@@ -32,6 +33,7 @@ namespace GameScene.BulletsModule
 
         public Bullet(Bullet bullet)
         {
+            Name = bullet.Name;
             Object = bullet.Object;
             ImpactEffect = bullet.ImpactEffect;
             Speed = bullet.Speed;

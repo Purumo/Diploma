@@ -11,9 +11,9 @@ namespace GameScene.BulletsModule
     public class TimeBonusController : MonoBehaviour, IBonuseController
     {
         private float bonuseCountdown;
+        private float countdownActionTime = 0f;
 
         private GameObject icon;
-        private float countdownActionTime;
         
         public float timeBetweenBonuse;
 
@@ -23,7 +23,7 @@ namespace GameScene.BulletsModule
 
         void Start()
         {
-            bonuseCountdown = WaveSpawner.countdown + timeBetweenBonuse;
+            bonuseCountdown = timeBetweenBonuse;
         }
         void Update()
         {
@@ -68,6 +68,8 @@ namespace GameScene.BulletsModule
 
                 icon = Instantiate(bullet.Icon, BulletsController.GetInstance().bonusesPanelUI);
             }
+
+            icon.transform.SetAsFirstSibling();
 
             bullet.CountdownText = icon.GetComponentInChildren<Text>();
 
