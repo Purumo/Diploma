@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using GameScene.EnemiesModule;
+using UnityEngine.UI;
 
 namespace GameScene.TurretsModule
 {
@@ -11,22 +9,23 @@ namespace GameScene.TurretsModule
     {
         public GameObject gameObject;
         public Transform firePoint;
+        public Text coundownText;
     }
 
     public class TurretsController : MonoBehaviour
     {
         private static TurretsController instance;
+        private TurretsState currentState;
 
-        //private float countdown;
-
-        //[Header("Unity Setup Fields")]
-        //public Transform bulletPool;
-        //public GameObject bulletPrefab;
+        private float countdownReloadTime = 0f;
+        private bool newShoot = false;
 
         [HideInInspector] public float varSpeed;
 
         [Header("Attributes")]
-        public float MoveTurretsSpeed = 3f;
+        public float moveTurretsSpeed = 0f;
+        public float reloadTime = 0f;
+        public float showReloadTime = 0f;
 
         [Header("Horizontal turrets Setup")]
         public Rigidbody2D turretsHorizontal;
@@ -38,29 +37,46 @@ namespace GameScene.TurretsModule
         public CanvasGroup verticalCanvasGroup;
         public Turret topTurret, botTurret;
 
-
-        private TurretsState currentState;
         void Start()
         {
             instance = this;
 
-            varSpeed = MoveTurretsSpeed;
-
-            //countdown = WaveSpawner.countdown;
+            varSpeed = moveTurretsSpeed;
 
             SetState(new HorizontalState(this));
         }
+        void Update()
+        {
+            if (countdownReloadTime > 0)//3) после "перезарядки" показываем в надписях оставшееся время 
+                                        //до возможности следующего выстрела
+            {
+                if(newShoot)
+                {
+                    if (reloadTime - countdownReloadTime >= showReloadTime * 2)
+                    {
+                        StartCoroutine(currentState.ShowInfoWithWaiting(
+                        string.Format("{0:0.00}", countdownReloadTime)));
+                    }
+                    newShoot = false;
+                }
+            }
+
+            countdownReloadTime -= Time.deltaTime;
+        }
+        public void ShootAction()
+        {
+            newShoot = true;
+
+            if (countdownReloadTime <= 0)//1) прошло кд -> игрок может стрелять
+            {
+                currentState.Shoot();
+
+                countdownReloadTime = reloadTime;//2) "перезаряжаем"
+            }
+        }
         void FixedUpdate()
         {
-            //if (countdown > 0)
-            //{
-            //    countdown -= Time.deltaTime;
-            //    return;
-            //}
-            //else
-            //{
-                currentState.Move();
-            //}
+            currentState.Move();
         }
 
         public static TurretsController GetInstance()
@@ -71,12 +87,12 @@ namespace GameScene.TurretsModule
         {
             currentState = state;
         }
+
         public void NoneAction() => currentState.Sleep();
         public void UpAction() => currentState.Up();
         public void DownAction() => currentState.Down();
         public void LeftAction() => currentState.Left();
         public void RightAction() => currentState.Right();
-        public void ShootAction() => currentState.Shoot();
         public void SwitchAction()
         {
             currentState.Sleep();

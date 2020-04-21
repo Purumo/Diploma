@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 namespace GameScene.BulletsModule
 {
@@ -11,7 +7,7 @@ namespace GameScene.BulletsModule
     {
         [HideInInspector] public ActivateFunc activateFunc;
 
-        public float waitCollectionTime = 4f;
+        public float waitCollectionTime = 0f;
 
         void Update()
         {

@@ -1,13 +1,10 @@
 ﻿using GameScene.EnemiesModule;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 //using GameScene.Effects;
 
 namespace GameScene.BulletsModule
 {
-    public class ClassicBullet : MonoBehaviour, IMovableBullet
+    public class ClassicBullet : MonoBehaviour
     {
         private Vector3 dir;
         private Rigidbody2D rb;
@@ -16,12 +13,12 @@ namespace GameScene.BulletsModule
 
         void Awake()
         {
-            rb = GetComponent<Rigidbody2D>();
+            rb = GetComponent<Rigidbody2D>();
             bullet = new Bullet(BulletsController.GetInstance().currentBullet);
         }
         protected void FixedUpdate()
         {
-            rb.AddForce(dir * bullet.Speed * Time.deltaTime);
+            rb.AddForce(dir * bullet.Speed * Time.fixedDeltaTime);
             Destroy(gameObject, bullet.LifeTime);
         }
         public void Seek(Vector3 direction, Bullet bullet)
@@ -43,7 +40,6 @@ namespace GameScene.BulletsModule
             vector4 vec = new vector4(rotx, 0, 0, 1);
             */
             #endregion
-
             //GameObject effectIns = Instantiate(bullet.ImpactEffect, transform.position,
             //    Quaternion.identity, BulletsController.GetInstance().effectsPool);
 
@@ -68,7 +64,7 @@ namespace GameScene.BulletsModule
         {
             //reqiures in refactoring
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position,
-                bullet.ExplosionRadius, BulletsController.layerMaskEnemy);
+                bullet.ExplosionRadius, BulletsController.layerMaskEnemy);
             Enemy enemy;
             foreach (Collider2D collider in colliders)
             {

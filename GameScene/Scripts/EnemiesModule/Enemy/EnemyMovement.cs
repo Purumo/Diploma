@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 namespace GameScene.EnemiesModule
 {
@@ -40,7 +36,6 @@ namespace GameScene.EnemiesModule
             {
                 slowCountdown -= Time.deltaTime;
             }
-
             if (wavepointIndex < moveTrajectory.Length)
             {
                 //if (enemy.varSpeed == 0)
@@ -56,7 +51,6 @@ namespace GameScene.EnemiesModule
 
                     //print(enemy.varSpeed);
                 //}
-
                 if (Vector3.Distance(transform.position, currentTarget.position) <= 0.4f)
                 {
                     GetNextWaypoint();

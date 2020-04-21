@@ -1,9 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-
 
 namespace GameScene.EnemiesModule
 {
@@ -38,7 +35,7 @@ namespace GameScene.EnemiesModule
         {
             if (EnemiesAlive > 0)
             {
-                return;
+                return;                
             }
 
             if (countdown <= 0f)

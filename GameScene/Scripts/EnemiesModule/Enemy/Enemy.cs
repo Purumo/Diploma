@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace GameScene.EnemiesModule
@@ -25,10 +22,8 @@ namespace GameScene.EnemiesModule
 
         public void TakeDamage(int amount)
         {
-            varHealth -= amount;
-
-            healthBar.fillAmount = varHealth / health;
-
+            varHealth -= amount;
+            healthBar.fillAmount = varHealth / health;
             if(varHealth <= 0)
             {
                 Die();

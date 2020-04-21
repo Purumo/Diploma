@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
-using GameScene.TurretsModule;
-using System.Collections.Generic;
-using System;
-
+using System.Collections.Generic;
 namespace GameScene.BulletsModule
 {
     public class BulletsController : MonoBehaviour
     {
         private static BulletsController instance;
 
-        [HideInInspector] public const int layerMaskEnemy = 1 << 10;
+        public const int layerMaskEnemy = 1 << 10;
+        private List<Bullet> bonusBullets = new List<Bullet>();
 
         [Header("Unity Setup Fields")]
         public Transform bulletsPool;
@@ -19,8 +17,7 @@ namespace GameScene.BulletsModule
         public Transform bonusesPanelUI;
 
         [Header("Standart bullet")]
-        public Bullet standartBullet;
-
+        public Bullet standartBullet;
         [HideInInspector] public Bullet currentBullet;
 
         void Start()
@@ -32,21 +29,23 @@ namespace GameScene.BulletsModule
         public static BulletsController GetInstance()
         {
             return instance;
-        }
-        public void ResetBullet()
+        }
+        public void AddNewBonusAction(Bullet bullet)
         {
-            currentBullet = new Bullet(standartBullet);
+            bonusBullets.Insert(0, bullet);
+            currentBullet = new Bullet(bonusBullets[0]);
         }
-
-        public static void Shoot(Turret turret)
+        public void RemoveBonusAction(Bullet bulletToRemove)
         {
-            Vector3 dir = turret.firePoint.position - turret.gameObject.transform.position;
-
-            GameObject bullet = Instantiate(
-                GetInstance().currentBullet.Object, turret.firePoint.position, turret.firePoint.rotation, GetInstance().bulletsPool);
-            IMovableBullet movableBullet = bullet.GetComponent<IMovableBullet>();
-
-            movableBullet.Seek(dir, GetInstance().currentBullet);
+            int idxToRemove = bonusBullets.FindIndex(item => item == bulletToRemove);                        bonusBullets.RemoveAt(idxToRemove);
+            if (bonusBullets.Count != 0)
+                currentBullet = new Bullet(bonusBullets[0]);
+            else
+                currentBullet = new Bullet(standartBullet);
+        }
+        public Bullet GetBonusAtIndex(int idx)
+        {
+            return bonusBullets[idx];
         }
     }
 }

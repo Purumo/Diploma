@@ -1,22 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 namespace GameScene.GameMaster
-{
-    public class PauseMenu : MonoBehaviour
+{        public class PauseMenu : MonoBehaviour
     {
-        private static PauseMenu instance;
-
+        private static PauseMenu instance;
         public GameObject ui;
-        public GameObject delayUi;
-
+        public GameObject delayUi;
         private void Start()
         {
-            //Time.timeScale = 1f;
             instance = this;
-        }
+        }
         void Update()
         {
             //to delete on build
@@ -24,16 +17,14 @@ namespace GameScene.GameMaster
             {
                 Toggle();
             }
-        }
+        }
         public void Toggle()
         {
-            ui.SetActive(!ui.activeSelf);
-
+            ui.SetActive(!ui.activeSelf);
             if (delayUi.activeSelf)
             {
                 delayUi.SetActive(false);
-            }
-
+            }
             if (ui.activeSelf)
             {
                 Time.timeScale = 0f;
@@ -42,17 +33,14 @@ namespace GameScene.GameMaster
             {
                 delayUi.SetActive(true);
             }
-        }
+        }
         public void Retry()
         {
-            //Toggle();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        public void Menu()
-        {
-            //Toggle();
+        public void Menu()        {
             SceneManager.LoadScene(MainMenu.mainMenu);
-        }
+        }
         public static PauseMenu GetInstance()
         {
             return instance;

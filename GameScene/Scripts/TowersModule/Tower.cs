@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
 namespace GameScene.Tower
 {
     public class Tower : MonoBehaviour
@@ -11,4 +8,4 @@ namespace GameScene.Tower
             GameManager.GetInstance().FinishGame();
         }
     }
-}
+}

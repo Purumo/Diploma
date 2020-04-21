@@ -1,8 +1,5 @@
 ﻿using GameScene.EnemiesModule;
 using GameScene.TurretsModule;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,43 +7,31 @@ namespace GameScene.BulletsModule
 {
     public class TimeBonusController : MonoBehaviour, IBonuseController
     {
-        private float bonuseCountdown;
         private float countdownActionTime = 0f;
 
         private GameObject icon;
         
         public float timeBetweenBonuse;
-
-        public float ActionTime;
+        public float actionTime;
 
         public Bullet bullet;
 
         void Start()
         {
-            bonuseCountdown = timeBetweenBonuse;
+            InvokeRepeating("SpawnBonuse", timeBetweenBonuse, timeBetweenBonuse);
         }
         void Update()
         {
-            if (bonuseCountdown <= 0f)
+            if (countdownActionTime > 0)
             {
-                SpawnBonuse();
-                bonuseCountdown = timeBetweenBonuse;
-            }
-            bonuseCountdown -= Time.deltaTime;
-
-            if (countdownActionTime <= 0f)
-            {
-                if (icon)
-                {
-                    BulletsController.GetInstance().ResetBullet();
-                    Destroy(icon);
-                }
-            }
-            else
-            {
-                bullet.CountdownText.text = (Mathf.Round(countdownActionTime) + 1).ToString();
-                //print((Mathf.Round(countdownActionTime) + 1));///for removing
                 countdownActionTime -= Time.deltaTime;
+                bullet.CountdownText.text = (Mathf.Round(countdownActionTime) + 1).ToString();
+
+                if (countdownActionTime <= 0f && icon)
+                {
+                    Destroy(icon);
+                    BulletsController.GetInstance().RemoveBonusAction(bullet);
+                }
             }
         }
         void SpawnBonuse()
@@ -64,16 +49,16 @@ namespace GameScene.BulletsModule
         {
             if (!icon)
             {
-                BulletsController.GetInstance().currentBullet = bullet;
+                BulletsController.GetInstance().AddNewBonusAction(bullet);
 
                 icon = Instantiate(bullet.Icon, BulletsController.GetInstance().bonusesPanelUI);
             }
 
             icon.transform.SetAsFirstSibling();
 
-            bullet.CountdownText = icon.GetComponentInChildren<Text>();
+            countdownActionTime = actionTime - 1;
 
-            countdownActionTime = ActionTime - 1;
+            bullet.CountdownText = icon.GetComponentInChildren<Text>();
         }
     }
 }

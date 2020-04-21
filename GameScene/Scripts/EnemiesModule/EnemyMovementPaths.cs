@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
+
 namespace GameScene.EnemiesModule
 {
     public class EnemyMovementPaths : MonoBehaviour
