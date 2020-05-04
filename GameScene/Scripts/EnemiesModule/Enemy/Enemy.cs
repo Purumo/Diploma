@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace GameScene.EnemiesModule
@@ -7,11 +9,14 @@ namespace GameScene.EnemiesModule
     {
         private Image healthBar;
         private float varHealth;
-        [HideInInspector] public float slowActionTime;
-        [HideInInspector] public float varSpeed;
 
-        public float speed = 2.5f;
-        public float health = 13;
+        //[HideInInspector] public float slowActionTime;
+        [HideInInspector] public float varSpeed;
+        [HideInInspector] public float lifeTimeAtEndPath = 60f;
+
+        public float speed = 0f;
+        public float health = 0f;
+        public int killPoints = 0;
 
         void Start()
         {
@@ -29,17 +34,24 @@ namespace GameScene.EnemiesModule
                 Die();
             }
         }
-        public void Slow(float pct, float slowTime) //0 <= pct <= 1 : 0 - normal speed, 1 - stop
-        {
-            varSpeed = speed * (1f - pct);
-            //print("varSpeed: " + varSpeed);
-            slowActionTime = slowTime;
-            //print("slowActionTime: " + slowActionTime);
-        }
         void Die()
         {
-            WaveSpawner.EnemiesAlive--;
+            PlayerStatistic.GetInstance().KillEnemy(killPoints);
+            
             Destroy(gameObject);
+        }
+        public void ChangeSpeed(float pct, float slowTime) //0 <= pct <= 1 : 0 - normal speed, 1 - stop
+        {
+            if (pct != 0 && slowTime != 0)
+            {
+                StartCoroutine(Slow(pct, slowTime));
+            }
+        }
+        private IEnumerator Slow(float pct, float slowTime)
+        {
+            varSpeed = speed * (1f - pct);
+            yield return new WaitForSeconds(slowTime);
+            varSpeed = speed;
         }
     }
 }

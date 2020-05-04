@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 26279877887518933}
   - component: {fileID: 2817280210319724874}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,6 +49,10 @@ EdgeCollider2D:
   m_Points:
   - {x: -5.5, y: -1.6}
   - {x: -5.5, y: 1.6}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &3446935795680395479
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,7 +63,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7398641816951189096}
   - component: {fileID: 7431704687265497410}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TriggerRB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2220023905372586928}
   - component: {fileID: 9209740680046359295}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TriggerLB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1850447199304212330}
   - component: {fileID: 8991474494762093332}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,6 +216,10 @@ EdgeCollider2D:
   m_Points:
   - {x: -3.6, y: -2.5}
   - {x: 3.6, y: -2.5}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &5910109354175416561
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2253411604943989065}
   - component: {fileID: 1221958799689844386}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TriggerRT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6434640677945024430}
   - component: {fileID: 7009048876258015745}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,6 +326,10 @@ EdgeCollider2D:
   m_Points:
   - {x: -3.6, y: 2.5}
   - {x: 3.6, y: 2.5}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &6701902129287305513
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 450744897898909945}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Movement border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 555756981514032846}
   - component: {fileID: 3337247513376590613}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,6 +417,10 @@ EdgeCollider2D:
   m_Points:
   - {x: 5.5, y: -1.6}
   - {x: 5.5, y: 1.6}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &7716212714468074782
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,7 +431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6620019982031297750}
   - component: {fileID: 3051099421021417091}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TriggerLT
   m_TagString: Untagged
   m_Icon: {fileID: 0}

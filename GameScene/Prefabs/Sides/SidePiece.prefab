@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7946644909096993763}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SidePiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6690075793151485308}
   - component: {fileID: 6690075793151485309}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tover_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,6 +77,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -123,7 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6690075794960516026}
   - component: {fileID: 6690075794960516027}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tover_16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,6 +160,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

@@ -6,11 +6,11 @@ namespace GameScene.TurretsModule
 {
     public class VerticalState : TurretsState
     {
-        private Rigidbody2D rigidbodyTurretsVertical;//??
+        //private Rigidbody2D rigidbodyTurretsVertical;//??
 
         public VerticalState(TurretsController controller) : base(controller) 
         {
-            rigidbodyTurretsVertical = controller.turretsVertical;
+            //rigidbodyTurretsVertical = controller.turretsVertical;
             controller.varSpeed = controller.moveTurretsSpeed;
 
             controller.horizCanvasGroup.alpha = 0.5f;
@@ -18,7 +18,7 @@ namespace GameScene.TurretsModule
         }
         public override void Move()
         {
-            rigidbodyTurretsVertical.velocity = controller.varSpeed * currentMoveDirection;
+            controller.turretsVertical.velocity = controller.varSpeed * currentMoveDirection;
         }
         public override void Sleep() => controller.varSpeed = 0;
         public override void Up() { }
@@ -48,7 +48,6 @@ namespace GameScene.TurretsModule
         }
         public override void Switching()
         {
-            //ShowInfo("");
             controller.SetState(new HorizontalState(controller));
         }
     }

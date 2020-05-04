@@ -1,0 +1,754 @@
+fileFormatVersion: 2
+guid: 7adb69d0ae8255a469cb8e34af150fa5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5355422444226185941
+    second: tover_0
+  - first:
+      213: -8715882190966245358
+    second: tover_1
+  - first:
+      213: 1380249498814248295
+    second: tover_2
+  - first:
+      213: -1812384579590707571
+    second: tover_3
+  - first:
+      213: 3196251992087027628
+    second: tover_4
+  - first:
+      213: 5400991044667705201
+    second: tover_5
+  - first:
+      213: 2911917866264286767
+    second: tover_6
+  - first:
+      213: 536524795457692807
+    second: tover_7
+  - first:
+      213: -6485701112206001704
+    second: tover_8
+  - first:
+      213: 6953297077872695521
+    second: tover_9
+  - first:
+      213: 1695389460612887774
+    second: tover_10
+  - first:
+      213: 290838615339107433
+    second: tover_11
+  - first:
+      213: -1468381183924697014
+    second: tover_12
+  - first:
+      213: 5454597402426534318
+    second: tover_13
+  - first:
+      213: 1244247007599279385
+    second: tover_14
+  - first:
+      213: -245351617656472027
+    second: tover_15
+  - first:
+      213: -2617030867433281270
+    second: tover_16
+  - first:
+      213: -2776091385712753578
+    second: tover_17
+  - first:
+      213: -8419989644689108708
+    second: tover_18
+  - first:
+      213: -8417566100448368838
+    second: tover_19
+  - first:
+      213: -8186873742739698294
+    second: tover_20
+  - first:
+      213: 1052785376230187196
+    second: tover_21
+  - first:
+      213: 3385371257976203594
+    second: tover_22
+  - first:
+      213: -7595679169025129012
+    second: tover_23
+  - first:
+      213: -4740696224548288480
+    second: tover_24
+  - first:
+      213: 9048087545235555814
+    second: tover_25
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tover_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1688
+        width: 671
+        height: 559
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa17fc3b8b2f3bc40b1bb5657c1ed342
+      internalID: 5355422444226185941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_1
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 1920
+        width: 396
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b86601adcfef842a75a528465b502a
+      internalID: -8715882190966245358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_2
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 1971
+        width: 453
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98047565c22a93042a4e25e35366d7d5
+      internalID: 1380249498814248295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_3
+      rect:
+        serializedVersion: 2
+        x: 1945
+        y: 2147
+        width: 752
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe2207547935884785c943077bd0720
+      internalID: -1812384579590707571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_4
+      rect:
+        serializedVersion: 2
+        x: 2948
+        y: 1716
+        width: 519
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4fa9e87cdcb3844a6b3f0974c6b6ba
+      internalID: 3196251992087027628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_5
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 1905
+        width: 330
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dfd29dbc4dce0d45b3c4b29726d0f13
+      internalID: 5400991044667705201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_6
+      rect:
+        serializedVersion: 2
+        x: 4335
+        y: 1842
+        width: 761
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb2541ddc8e3b414aa7f850b8491f1a5
+      internalID: 2911917866264286767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_7
+      rect:
+        serializedVersion: 2
+        x: 5326
+        y: 1801
+        width: 475
+        height: 541
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b33734bdd0d7f44d8dcbad3924ca2df
+      internalID: 536524795457692807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_8
+      rect:
+        serializedVersion: 2
+        x: 6027
+        y: 2134
+        width: 414
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06bf5c891892c9b4f938aee48e31096c
+      internalID: -6485701112206001704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1310
+        width: 665
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 073fd0b8760c5be46a88fdbae9fdd131
+      internalID: 6953297077872695521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_10
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 1096
+        width: 1075
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2379a3815a043eb4c87645d1cd7aac95
+      internalID: 1695389460612887774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_11
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 1163
+        width: 607
+        height: 742
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626ef8ae692bf344d850b7200fbd42f6
+      internalID: 290838615339107433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_12
+      rect:
+        serializedVersion: 2
+        x: 3392
+        y: 980
+        width: 588
+        height: 557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cdd1e0d458ad324b8f787ffedf5cad7
+      internalID: -1468381183924697014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_13
+      rect:
+        serializedVersion: 2
+        x: 4754
+        y: 955
+        width: 537
+        height: 663
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3438829a07c0bbb419c920745077d4a0
+      internalID: 5454597402426534318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_14
+      rect:
+        serializedVersion: 2
+        x: 6182
+        y: 1320
+        width: 259
+        height: 739
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359fde37747a1a541a8d4902ecb355a2
+      internalID: 1244247007599279385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_15
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 901
+        width: 437
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f94b265a6a30f7345b81e66c10597ac8
+      internalID: -245351617656472027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_16
+      rect:
+        serializedVersion: 2
+        x: 2552
+        y: 876
+        width: 516
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db229132308b86f40b7e9ddf96d0a774
+      internalID: -2617030867433281270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_17
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 203
+        width: 575
+        height: 544
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b19fc76de3191574aac6557b7e428965
+      internalID: -2776091385712753578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_18
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 0
+        width: 595
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4480d18642d56d746a6f9617ef439d3c
+      internalID: -8419989644689108708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_19
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 357
+        width: 529
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114053f236cc0fb4a97fcd8a289c7a9d
+      internalID: -8417566100448368838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_20
+      rect:
+        serializedVersion: 2
+        x: 3313
+        y: 417
+        width: 415
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 997bd2fce1752ac49b6ff899915c866a
+      internalID: -8186873742739698294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_21
+      rect:
+        serializedVersion: 2
+        x: 4289
+        y: 486
+        width: 518
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72abd5f2523209a439ddd30fb92ce4c4
+      internalID: 1052785376230187196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_22
+      rect:
+        serializedVersion: 2
+        x: 4968
+        y: 175
+        width: 537
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e3ee5e66d232034e87c3acaeea61aa6
+      internalID: 3385371257976203594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_23
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 0
+        width: 302
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb37b644b562a445a5f429ca867e650
+      internalID: -7595679169025129012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_24
+      rect:
+        serializedVersion: 2
+        x: 2848
+        y: 49
+        width: 519
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70dc48c7972cac347803f3b81d27f247
+      internalID: -4740696224548288480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tover_25
+      rect:
+        serializedVersion: 2
+        x: 3911
+        y: 99
+        width: 277
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eabd69b60ec150448abf75da214d741
+      internalID: 9048087545235555814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

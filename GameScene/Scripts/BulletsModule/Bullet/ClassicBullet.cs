@@ -46,11 +46,11 @@ namespace GameScene.BulletsModule
             //float lifeTime = bullet.ImpactEffect.GetComponent<ParticleSystem>().main.startLifetimeMultiplier;
             //Destroy(effectIns, lifeTime);
 
-            if (bullet.ExplosionRadius <= 0)
+            if (bullet.ExplosionRadius == 0)
             {
                 Enemy enemy = collision.gameObject.GetComponent<Enemy>();
                 enemy.TakeDamage(bullet.Damage);
-                enemy.Slow(bullet.SlowEnemyAmount, bullet.SlowActionTime);
+                enemy.ChangeSpeed(bullet.SlowEnemyAmount, bullet.SlowActionTime);
             }
             else
             {
@@ -70,7 +70,7 @@ namespace GameScene.BulletsModule
             {
                 enemy = collider.gameObject.GetComponent<Enemy>();
                 enemy.TakeDamage(bullet.Damage);
-                enemy.Slow(bullet.SlowEnemyAmount, bullet.SlowActionTime);
+                enemy.ChangeSpeed(bullet.SlowEnemyAmount, bullet.SlowActionTime);
             }
         }
     }

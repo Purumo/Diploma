@@ -9,9 +9,7 @@ namespace GameScene.EnemiesModule
         private Vector3 direction;
 
         private Collider2D cldr;
-
         private Enemy enemy;
-        private float slowCountdown;
 
         [HideInInspector] public int[] moveTrajectory;
 
@@ -22,35 +20,15 @@ namespace GameScene.EnemiesModule
 
             cldr = GetComponent<Collider2D>();
             enemy = GetComponent<Enemy>();
-            slowCountdown = enemy.slowActionTime;
         }
 
         void Update()
         {
-            if (slowCountdown <= 0)// && enemy.slowActionTime != 0)//?
-            {
-                enemy.varSpeed = enemy.speed;
-                slowCountdown = enemy.slowActionTime;
-            }
-            else
-            {
-                slowCountdown -= Time.deltaTime;
-            }
             if (wavepointIndex < moveTrajectory.Length)
             {
-                //if (enemy.varSpeed == 0)
-                //{
-                //    cldr.enabled = false;
-                //}
-                //else
-                //{
-                    //cldr.enabled = true;
+                direction = currentTarget.position - transform.position;
+                transform.Translate(direction.normalized * enemy.varSpeed * Time.deltaTime);
 
-                    direction = currentTarget.position - transform.position;
-                    transform.Translate(direction.normalized * enemy.varSpeed * Time.deltaTime);
-
-                    //print(enemy.varSpeed);
-                //}
                 if (Vector3.Distance(transform.position, currentTarget.position) <= 0.4f)
                 {
                     GetNextWaypoint();
@@ -59,8 +37,7 @@ namespace GameScene.EnemiesModule
             else
             {
                 cldr.enabled = false;
-
-                Destroy(gameObject, 60f);
+                Destroy(gameObject, enemy.lifeTimeAtEndPath);//sec
             }
         }
         
@@ -69,7 +46,7 @@ namespace GameScene.EnemiesModule
             wavepointIndex++;
             if (wavepointIndex >= moveTrajectory.Length)
             {
-                WaveSpawner.EnemiesAlive--;
+                WaveSpawner.enemiesAlive--;
                 return;
             }
             else

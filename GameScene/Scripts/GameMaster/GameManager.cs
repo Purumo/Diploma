@@ -3,8 +3,9 @@ using GameScene.GameMaster;
 public class GameManager : MonoBehaviour
 {
 	private static GameManager instance;
-	private int layerIdxTower;
+	private int layerIdxTower;
 	private int layerIdxEnemy;
+
 	private bool GameIsOver;
 
 	public GameObject gameOverUI;
@@ -15,8 +16,8 @@ public class GameManager : MonoBehaviour
 		instance = this;
 
 		GameIsOver = false;
-		layerIdxTower = LayerMask.NameToLayer("Tower");
-		layerIdxEnemy = LayerMask.NameToLayer("Enemy");
+		layerIdxTower = LayerMask.NameToLayer("Tower");
+		layerIdxEnemy = LayerMask.NameToLayer("Enemy");
 		Physics2D.IgnoreLayerCollision(layerIdxTower, layerIdxEnemy, false);
 	}
 	void Update()
@@ -31,14 +32,13 @@ public class GameManager : MonoBehaviour
 	public void FinishGame()
 	{
 		//uncomment to have a GameOver
-		//GameIsOver = true;
-		//gameOverUI.SetActive(true);
-		Physics2D.IgnoreLayerCollision(
-			layerIdxTower, layerIdxEnemy, true);
+		GameIsOver = true;
+		gameOverUI.SetActive(true);
+		Physics2D.IgnoreLayerCollision(layerIdxTower, layerIdxEnemy, true);
 	}
 	void OnApplicationFocus(bool isFocused)
 	{
-		if (!isFocused)
+		if (!isFocused && !GameIsOver)
 			PauseMenu.GetInstance().Toggle();
 	}
 }

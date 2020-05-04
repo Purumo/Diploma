@@ -434,10 +434,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6b8ea48d5cd8ca4dad1068d1449321e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowActionTime: 0
   varSpeed: 0
+  lifeTimeAtEndPath: 60
   speed: 2
   health: 60
+  killPoints: 20
 --- !u!114 &3715093169172169051
 MonoBehaviour:
   m_ObjectHideFlags: 0
