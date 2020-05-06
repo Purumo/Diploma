@@ -71,12 +71,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 21300008, guid: 250ee570ea7c61746868682510e6528b, type: 3}
+  m_Sprite: {fileID: 5400991044667705201, guid: 7adb69d0ae8255a469cb8e34af150fa5,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.3006287, y: 4.4}
+  m_Size: {x: 3.3006287, y: 4.3700004}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -258,13 +259,14 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
-  m_Sprite: {fileID: 21300048, guid: 250ee570ea7c61746868682510e6528b, type: 3}
+  m_SortingOrder: 8
+  m_Sprite: {fileID: -4740696224548288480, guid: 7adb69d0ae8255a469cb8e34af150fa5,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.251, y: 2.1699998}
+  m_Size: {x: 5.1909885, y: 2.1399999}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -340,13 +342,14 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
-  m_Sprite: {fileID: 21300048, guid: 250ee570ea7c61746868682510e6528b, type: 3}
+  m_SortingOrder: 7
+  m_Sprite: {fileID: -4740696224548288480, guid: 7adb69d0ae8255a469cb8e34af150fa5,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.251, y: 2.1699998}
+  m_Size: {x: 5.1909885, y: 2.1399999}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -423,12 +426,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300050, guid: 250ee570ea7c61746868682510e6528b, type: 3}
+  m_Sprite: {fileID: 9048087545235555814, guid: 7adb69d0ae8255a469cb8e34af150fa5,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.7605257, y: 1.73}
+  m_Size: {x: 2.7705276, y: 1.73}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

@@ -13,8 +13,6 @@ namespace GameScene.GameMaster
 		
 		public void Quit()
 		{
-			//add exit choice here
-			print("szfdgfyuio");
 			Application.Quit();
 		}
 	}

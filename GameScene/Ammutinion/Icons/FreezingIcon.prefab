@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1599006622393317901}
   - component: {fileID: 1599006622393317899}
   - component: {fileID: 1599006622393317900}
-  m_Layer: 14
+  m_Layer: 5
   m_Name: Countdown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 1599006623804536180}
   - component: {fileID: 1599006623804536181}
   - component: {fileID: 1599006623804536182}
-  m_Layer: 14
+  m_Layer: 5
   m_Name: FreezingIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

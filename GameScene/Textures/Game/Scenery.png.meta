@@ -1,66 +1,69 @@
 fileFormatVersion: 2
-guid: cc84aeff9ec56654ea3db8e5f65b632f
+guid: a1dd0e89c86a9ec48abf2e57fac6aac1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 21300000
-    second: grass_0
+      213: 1436459187073071794
+    second: Scenery_0
   - first:
-      213: 21300002
-    second: grass_1
+      213: 4952493192922668218
+    second: Scenery_1
   - first:
-      213: 21300004
-    second: grass_2
+      213: -5682900327294240983
+    second: Scenery_2
   - first:
-      213: 21300006
-    second: grass_3
+      213: 2514131775105911306
+    second: Scenery_3
   - first:
-      213: 21300008
-    second: grass_4
+      213: -5885791224262380789
+    second: Scenery_4
   - first:
-      213: 21300010
-    second: grass_5
+      213: -1768971823409969204
+    second: Scenery_5
   - first:
-      213: 21300012
-    second: grass_6
+      213: -4310474760852792895
+    second: Scenery_6
   - first:
-      213: 21300014
-    second: grass_7
+      213: -4376301620443058219
+    second: Scenery_7
   - first:
-      213: 21300016
-    second: grass_8
+      213: -4022455927812117467
+    second: Scenery_8
   - first:
-      213: 21300018
-    second: grass_9
+      213: -3121163763066016508
+    second: Scenery_9
   - first:
-      213: 21300020
-    second: grass_10
+      213: 3450567310680228544
+    second: Scenery_10
   - first:
-      213: 21300022
-    second: grass_11
+      213: -871152722413154951
+    second: Scenery_11
   - first:
-      213: 21300024
-    second: grass_12
+      213: 891377433634887951
+    second: Scenery_12
   - first:
-      213: 21300026
-    second: grass_13
+      213: 8286506543576305601
+    second: Scenery_13
   - first:
-      213: 21300028
-    second: grass_14
+      213: -853634873686467666
+    second: Scenery_14
   - first:
-      213: 21300030
-    second: grass_15
+      213: -279428211594927491
+    second: Scenery_15
   - first:
-      213: 21300032
-    second: grass_16
+      213: -3385483476609860969
+    second: Scenery_16
   - first:
-      213: 21300034
-    second: grass_17
+      213: -8428860945259701336
+    second: Scenery_17
+  - first:
+      213: -2790160391569043749
+    second: Scenery_18
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -82,12 +85,12 @@ TextureImporter:
   generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
-    aniso: 16
+    filterMode: -1
+    aniso: -1
     mipBias: -100
     wrapU: 1
     wrapV: 1
@@ -113,10 +116,34 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -131,13 +158,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: grass_0
+      name: Scenery_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1878
-        width: 426
-        height: 520
+        y: 2615
+        width: 2829
+        height: 1315
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02305410000000000800000000000000
-      internalID: 21300000
+      spriteID: 2ba36db15045fe310800000000000000
+      internalID: 1436459187073071794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass_1
+      name: Scenery_1
       rect:
         serializedVersion: 2
-        x: 650
-        y: 1878
-        width: 679
-        height: 511
+        x: 2878
+        y: 2898
+        width: 1298
+        height: 241
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22305410000000000800000000000000
-      internalID: 21300002
+      spriteID: abc12bcc15acab440800000000000000
+      internalID: 4952493192922668218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass_2
+      name: Scenery_2
       rect:
         serializedVersion: 2
-        x: 1512
-        y: 1878
-        width: 774
-        height: 597
+        x: 4425
+        y: 2861
+        width: 3393
+        height: 617
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42305410000000000800000000000000
-      internalID: 21300004
+      spriteID: 927fca9f2484221b0800000000000000
+      internalID: -5682900327294240983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass_3
+      name: Scenery_3
       rect:
         serializedVersion: 2
-        x: 2480
-        y: 1878
-        width: 627
-        height: 517
+        x: 8361
+        y: 2796
+        width: 296
+        height: 1055
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62305410000000000800000000000000
-      internalID: 21300006
+      spriteID: a0ac5bd678df3e220800000000000000
+      internalID: 2514131775105911306
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass_4
+      name: Scenery_4
       rect:
         serializedVersion: 2
-        x: 3162
-        y: 1878
-        width: 725
-        height: 734
+        x: 9000
+        y: 2814
+        width: 499
+        height: 1116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,167 +256,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82305410000000000800000000000000
-      internalID: 21300008
+      spriteID: b03bab7d018715ea0800000000000000
+      internalID: -5885791224262380789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass_5
-      rect:
-        serializedVersion: 2
-        x: 3952
-        y: 1878
-        width: 462
-        height: 498
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a2305410000000000800000000000000
-      internalID: 21300010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: grass_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 999
-        width: 426
-        height: 521
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2305410000000000800000000000000
-      internalID: 21300012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: grass_7
-      rect:
-        serializedVersion: 2
-        x: 650
-        y: 999
-        width: 679
-        height: 685
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e2305410000000000800000000000000
-      internalID: 21300014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: grass_8
-      rect:
-        serializedVersion: 2
-        x: 1512
-        y: 999
-        width: 774
-        height: 597
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 03305410000000000800000000000000
-      internalID: 21300016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: grass_9
-      rect:
-        serializedVersion: 2
-        x: 2480
-        y: 999
-        width: 557
-        height: 517
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 23305410000000000800000000000000
-      internalID: 21300018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: grass_10
-      rect:
-        serializedVersion: 2
-        x: 3162
-        y: 999
-        width: 725
-        height: 737
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43305410000000000800000000000000
-      internalID: 21300020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: grass_11
-      rect:
-        serializedVersion: 2
-        x: 3952
-        y: 999
-        width: 462
-        height: 500
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63305410000000000800000000000000
-      internalID: 21300022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: grass_12
+      name: Scenery_5
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 426
-        height: 518
+        width: 2799
+        height: 1665
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -397,20 +277,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83305410000000000800000000000000
-      internalID: 21300024
+      spriteID: cc749ffbf795377e0800000000000000
+      internalID: -1768971823409969204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass_13
+      name: Scenery_6
       rect:
         serializedVersion: 2
-        x: 650
-        y: 0
-        width: 679
-        height: 682
+        x: 2702
+        y: 1283
+        width: 2252
+        height: 714
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,20 +298,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3305410000000000800000000000000
-      internalID: 21300026
+      spriteID: 1c9151afa0e1e24c0800000000000000
+      internalID: -4310474760852792895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass_14
+      name: Scenery_7
       rect:
         serializedVersion: 2
-        x: 1512
-        y: 0
-        width: 774
-        height: 594
+        x: 5364
+        y: 1209
+        width: 705
+        height: 1419
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -439,20 +319,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3305410000000000800000000000000
-      internalID: 21300028
+      spriteID: 5df6683ecd04443c0800000000000000
+      internalID: -4376301620443058219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass_15
+      name: Scenery_8
       rect:
         serializedVersion: 2
-        x: 2480
-        y: 0
-        width: 557
-        height: 514
+        x: 6533
+        y: 1181
+        width: 1359
+        height: 1420
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -460,20 +340,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3305410000000000800000000000000
-      internalID: 21300030
+      spriteID: 52c281245ad5d28c0800000000000000
+      internalID: -4022455927812117467
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass_16
+      name: Scenery_9
       rect:
         serializedVersion: 2
-        x: 3162
-        y: 0
-        width: 725
-        height: 734
+        x: 8263
+        y: 1172
+        width: 547
+        height: 1234
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -481,20 +361,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04305410000000000800000000000000
-      internalID: 21300032
+      spriteID: 40de0a818166fa4d0800000000000000
+      internalID: -3121163763066016508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grass_17
+      name: Scenery_10
       rect:
         serializedVersion: 2
-        x: 3952
+        x: 8959
         y: 0
-        width: 462
-        height: 497
+        width: 540
+        height: 2428
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -502,8 +382,176 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24305410000000000800000000000000
-      internalID: 21300034
+      spriteID: 0c28baaefa0e2ef20800000000000000
+      internalID: 3450567310680228544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery_11
+      rect:
+        serializedVersion: 2
+        x: 2985
+        y: 7
+        width: 1256
+        height: 643
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d037be63b09e3f0800000000000000
+      internalID: -871152722413154951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery_12
+      rect:
+        serializedVersion: 2
+        x: 4409
+        y: 421
+        width: 245
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f095b9c9d0fce5c00800000000000000
+      internalID: 891377433634887951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery_13
+      rect:
+        serializedVersion: 2
+        x: 7006
+        y: 21
+        width: 1252
+        height: 645
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cfc0de2cc59ff270800000000000000
+      internalID: 8286506543576305601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery_14
+      rect:
+        serializedVersion: 2
+        x: 8342
+        y: 564
+        width: 185
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab580aea974724f0800000000000000
+      internalID: -853634873686467666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery_15
+      rect:
+        serializedVersion: 2
+        x: 4418
+        y: 262
+        width: 153
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7269a3a5854f1cf0800000000000000
+      internalID: -279428211594927491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery_16
+      rect:
+        serializedVersion: 2
+        x: 5656
+        y: 235
+        width: 432
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79af6bf07b85401d0800000000000000
+      internalID: -3385483476609860969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery_17
+      rect:
+        serializedVersion: 2
+        x: 4363
+        y: 21
+        width: 407
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8abd1a8d0aba60b80800000000000000
+      internalID: -8428860945259701336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenery_18
+      rect:
+        serializedVersion: 2
+        x: 5227
+        y: 63
+        width: 1028
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde892228eb5749d0800000000000000
+      internalID: -2790160391569043749
       vertices: []
       indices: 
       edges: []
@@ -511,7 +559,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 

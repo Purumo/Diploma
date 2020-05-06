@@ -6,7 +6,7 @@ namespace GameScene.BulletsModule
 {
     public class ClassicBullet : MonoBehaviour
     {
-        private Vector3 dir;
+        private Vector2 dir;
         private Rigidbody2D rb;
 
         private Bullet bullet;
@@ -21,7 +21,7 @@ namespace GameScene.BulletsModule
             rb.AddForce(dir * bullet.Speed * Time.fixedDeltaTime);
             Destroy(gameObject, bullet.LifeTime);
         }
-        public void Seek(Vector3 direction, Bullet bullet)
+        public void Seek(Vector2 direction, Bullet bullet)
         {
             dir = direction.normalized;
             this.bullet = new Bullet(bullet);

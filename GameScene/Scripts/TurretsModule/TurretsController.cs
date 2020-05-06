@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,7 +19,6 @@ namespace GameScene.TurretsModule
         private TurretsState currentState;
 
         private float countdownReloadTime = 0f;
-        private bool newShoot = false;
 
         [HideInInspector] public float varSpeed;
 
@@ -47,32 +47,25 @@ namespace GameScene.TurretsModule
         }
         void Update()
         {
-            if (countdownReloadTime > 0)//3) после "перезарядки" показываем в надписях оставшееся время 
-                                        //до возможности следующего выстрела
+            if (countdownReloadTime > 0)
             {
-                if(newShoot)
-                {
-                    if (reloadTime - countdownReloadTime >= showReloadTime * 2)
-                    {
-                        StartCoroutine(currentState.ShowInfoWithWaiting(
-                        string.Format("{0:0.00}", countdownReloadTime)));
-                    }
-                    newShoot = false;
-                }
+                StartCoroutine(TurretsRecharge());
             }
 
             countdownReloadTime -= Time.deltaTime;
         }
         public void ShootAction()
         {
-            newShoot = true;
-
             if (countdownReloadTime <= 0)//1) прошло кд -> игрок может стрелять
             {
                 currentState.Shoot();
 
                 countdownReloadTime = reloadTime;//2) "перезаряжаем"
             }
+        }
+        private IEnumerator TurretsRecharge()
+        {
+            yield return new WaitForSeconds(showReloadTime);
         }
         void FixedUpdate()
         {

@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5487489505655868797}
-  - component: {fileID: 6135635922933409383}
   m_Layer: 8
   m_Name: Long Horizontal Side
   m_TagString: Untagged
@@ -51,24 +50,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!68 &6135635922933409383
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5487489505655868796}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -9.052615, y: -4.46976}
-  - {x: 8.93827, y: -4.459255}
 --- !u!1001 &5487489505044849293
 PrefabInstance:
   m_ObjectHideFlags: 0

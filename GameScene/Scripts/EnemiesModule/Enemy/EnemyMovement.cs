@@ -6,7 +6,7 @@ namespace GameScene.EnemiesModule
     {
         private Transform currentTarget;
         private int wavepointIndex = 0;
-        private Vector3 direction;
+        private Vector2 direction;
 
         private Collider2D cldr;
         private Enemy enemy;
@@ -29,7 +29,7 @@ namespace GameScene.EnemiesModule
                 direction = currentTarget.position - transform.position;
                 transform.Translate(direction.normalized * enemy.varSpeed * Time.deltaTime);
 
-                if (Vector3.Distance(transform.position, currentTarget.position) <= 0.4f)
+                if (Vector2.Distance(transform.position, currentTarget.position) <= 0.4f)
                 {
                     GetNextWaypoint();
                 }
