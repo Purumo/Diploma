@@ -11,7 +11,6 @@ namespace GameScene.BulletsModule
 
         [Header("Unity Setup Fields")]
         public Transform bulletsPool;
-        public Transform effectsPool;
 
         public Transform bonusesPool;
         public Transform bonusesPanelUI;
@@ -29,7 +28,7 @@ namespace GameScene.BulletsModule
         public static BulletsController GetInstance()
         {
             return instance;
-        }
+        }
         public void AddNewBonusAction(Bullet bullet)
         {
             bonusBullets.Insert(0, bullet);

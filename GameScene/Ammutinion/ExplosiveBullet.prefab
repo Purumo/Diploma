@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3858685588672462618}
   - component: {fileID: 3858685588672462619}
   - component: {fileID: 3858685588672462612}
-  - component: {fileID: 3858685588672462613}
+  - component: {fileID: -7751416550515794859}
   m_Layer: 12
   m_Name: ExplosiveBullet
   m_TagString: Untagged
@@ -177,7 +177,7 @@ PolygonCollider2D:
       - {x: 0.2812421, y: -0.3213193}
       - {x: 0.27284038, y: 0.0079531}
       - {x: 0.087273784, y: 0.3947286}
---- !u!114 &3858685588672462613
+--- !u!114 &-7751416550515794859
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3858685588672462614}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 652355832f4f4d04fb45e24a50e2f2ef, type: 3}
+  m_Script: {fileID: 11500000, guid: d6435ae7f9acc9e4f8f5e485f2918ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3858685588835760997

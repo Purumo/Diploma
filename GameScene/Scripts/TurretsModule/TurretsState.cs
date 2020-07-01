@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 using GameScene.BulletsModule;
-using UnityEngine.UI;
-using System.Collections;
 
 namespace GameScene.TurretsModule
 {
@@ -16,7 +14,7 @@ namespace GameScene.TurretsModule
             Vector2 dir = turret.firePoint.position - turret.gameObject.transform.position;
 
             GameObject bullet = Object.Instantiate(
-                BulletsController.GetInstance().currentBullet.Object, turret.firePoint.position, 
+                BulletsController.GetInstance().currentBullet.gameObj, turret.firePoint.position, 
                 turret.firePoint.rotation, BulletsController.GetInstance().bulletsPool);
             ClassicBullet movableBullet = bullet.GetComponent<ClassicBullet>();
 

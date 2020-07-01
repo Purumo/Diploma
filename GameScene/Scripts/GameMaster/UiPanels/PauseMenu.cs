@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-namespace GameScene.GameMaster
+namespace GameScene.GameMaster.UI
 {        public class PauseMenu : MonoBehaviour
     {
         private static PauseMenu instance;
@@ -9,15 +9,7 @@ namespace GameScene.GameMaster
         private void Start()
         {
             instance = this;
-        }
-        void Update()
-        {
-            //to delete on build
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                Toggle();
-            }
-        }
+        }
         public void Toggle()
         {
             ui.SetActive(!ui.activeSelf);
@@ -33,14 +25,14 @@ namespace GameScene.GameMaster
             {
                 delayUi.SetActive(true);
             }
-        }
+        }
         public void Retry()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         public void Menu()        {
             SceneManager.LoadScene(MainMenu.mainMenu);
-        }
+        }
         public static PauseMenu GetInstance()
         {
             return instance;

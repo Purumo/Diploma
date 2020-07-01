@@ -8,12 +8,10 @@ namespace GameScene.BulletsModule
     public class TimeBonusController : MonoBehaviour, IBonuseController
     {
         private float countdownActionTime = 0f;
-
         private GameObject icon;
-        
-        public float timeBetweenBonuse;
-        public float actionTime;
 
+        [Range(0, 600)] public float timeBetweenBonuse;
+        [Range(0, 120)] public float actionTime;
         public Bullet bullet;
 
         void Start()
@@ -25,9 +23,9 @@ namespace GameScene.BulletsModule
             if (countdownActionTime > 0)
             {
                 countdownActionTime -= Time.deltaTime;
-                bullet.CountdownText.text = (Mathf.Round(countdownActionTime) + 1).ToString();
+                bullet.countdownText.text = (Mathf.Round(countdownActionTime) + 1).ToString() + " с";
 
-                if (countdownActionTime <= 0f && icon)
+                if (countdownActionTime <= 0f)
                 {
                     Destroy(icon);
                     BulletsController.GetInstance().RemoveBonusAction(bullet);
@@ -40,7 +38,7 @@ namespace GameScene.BulletsModule
             float yTo = TurretsController.GetInstance().topTurret.gameObject.transform.position.y;
             Vector2 spawnPoint = WaveSpawner.SelectRandomRectangleSpawnPoint(-xTo, xTo, -yTo, yTo);
 
-            GameObject spriteObject = Instantiate(bullet.Sprite, spawnPoint,
+            GameObject spriteObject = Instantiate(bullet.sprite, spawnPoint,
                 Quaternion.identity, BulletsController.GetInstance().bonusesPool);
             Sprite sprite = spriteObject.GetComponent<Sprite>();
             sprite.activateFunc = delegate { Activate(); };
@@ -51,14 +49,12 @@ namespace GameScene.BulletsModule
             {
                 BulletsController.GetInstance().AddNewBonusAction(bullet);
 
-                icon = Instantiate(bullet.Icon, BulletsController.GetInstance().bonusesPanelUI);
+                icon = Instantiate(bullet.icon, BulletsController.GetInstance().bonusesPanelUI);
             }
 
             icon.transform.SetAsFirstSibling();
-
             countdownActionTime = actionTime - 1;
-
-            bullet.CountdownText = icon.GetComponentInChildren<Text>();
+            bullet.countdownText = icon.GetComponentInChildren<Text>();
         }
     }
 }

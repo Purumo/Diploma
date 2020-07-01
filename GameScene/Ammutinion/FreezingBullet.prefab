@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 6489887496515245777}
   - component: {fileID: 6489887496515245776}
   - component: {fileID: 6489887496515245783}
-  - component: {fileID: 6489887496515245782}
+  - component: {fileID: 8548694114244251788}
   m_Layer: 12
   m_Name: FreezingBullet
   m_TagString: Untagged
@@ -257,7 +257,7 @@ PolygonCollider2D:
       - {x: -0.13164353, y: -0.6701914}
       - {x: 0.33374313, y: -0.36031887}
       - {x: 0.31245822, y: -0.067795575}
---- !u!114 &6489887496515245782
+--- !u!114 &8548694114244251788
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -266,7 +266,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6489887496515245781}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 652355832f4f4d04fb45e24a50e2f2ef, type: 3}
+  m_Script: {fileID: 11500000, guid: d6435ae7f9acc9e4f8f5e485f2918ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6489887496884729912

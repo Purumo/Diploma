@@ -1,8 +1,9 @@
-﻿using GameScene.EnemiesModule;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-namespace GameScene.GameMaster
+using UnityEngine.SceneManagement;using GameScene.GameMaster.DataSaverModule;
+using GameScene.GameMaster.Statistic;
+
+namespace GameScene.GameMaster.UI
 {
 	public class GameOver : MonoBehaviour
 	{		public Text pointsText;
@@ -16,7 +17,6 @@ namespace GameScene.GameMaster
 				PlayerStatistic.GetInstance().pointsScored.score,
 				PlayerStatistic.GetInstance().roundsPassed.score);
 		}
-
 		public void Retry()
 		{
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

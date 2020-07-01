@@ -2,12 +2,12 @@
 
 namespace GameScene.BulletsModule
 {
-    public delegate void ActivateFunc();
+    public delegate void ActivateBonuseFunc();
     public class Sprite : MonoBehaviour
     {
-        [HideInInspector] public ActivateFunc activateFunc;
+        [HideInInspector] public ActivateBonuseFunc activateFunc;
 
-        public float waitCollectionTime = 0f;
+        [Range(0, 60)] public float waitCollectionTime = 0f;
 
         void Update()
         {

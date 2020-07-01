@@ -436,9 +436,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   varSpeed: 0
   lifeTimeAtEndPath: 60
-  speed: 2
-  health: 60
-  killPoints: 20
+  speed: 1.6
+  health: 51
+  killPoints: 51
 --- !u!114 &3715093169172169051
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,37 +11,32 @@ namespace GameScene.TurretsModule
         public Transform firePoint;
         public Text coundownText;
     }
-
     public class TurretsController : MonoBehaviour
     {
         private static TurretsController instance;
         private TurretsState currentState;
 
         private float countdownReloadTime = 0f;
-
         [HideInInspector] public float varSpeed;
 
         [Header("Attributes")]
-        public float moveTurretsSpeed = 0f;
-        public float reloadTime = 0f;
-        public float showReloadTime = 0f;
+        [Range(0, 10)] public float moveTurretsSpeed = 0f;
+        [Range(0, 5)] public float reloadTime = 0f;
 
         [Header("Horizontal turrets Setup")]
-        public Rigidbody2D turretsHorizontal;
-        public CanvasGroup horizCanvasGroup;
+        public Rigidbody2D rigidbodyTurretsHorizontal;
+        public CanvasGroup horizButtonsCanvasGroup;
         public Turret rightTurret, leftTurret;
 
         [Header("Vertical turrets Setup")]
-        public Rigidbody2D turretsVertical;
-        public CanvasGroup verticalCanvasGroup;
+        public Rigidbody2D rigidbodyTurretsVertical;
+        public CanvasGroup verticalButtonsCanvasGroup;
         public Turret topTurret, botTurret;
 
         void Start()
         {
             instance = this;
-
             varSpeed = moveTurretsSpeed;
-
             SetState(new HorizontalState(this));
         }
         void Update()
@@ -56,22 +50,20 @@ namespace GameScene.TurretsModule
         }
         public void ShootAction()
         {
-            if (countdownReloadTime <= 0)//1) прошло кд -> игрок может стрелять
+            if (countdownReloadTime <= 0)
             {
                 currentState.Shoot();
-
-                countdownReloadTime = reloadTime;//2) "перезаряжаем"
+                countdownReloadTime = reloadTime;
             }
         }
         private IEnumerator TurretsRecharge()
         {
-            yield return new WaitForSeconds(showReloadTime);
+            yield return new WaitForSeconds(reloadTime);
         }
         void FixedUpdate()
         {
             currentState.Move();
         }
-
         public static TurretsController GetInstance()
         {
             return instance;
@@ -80,7 +72,6 @@ namespace GameScene.TurretsModule
         {
             currentState = state;
         }
-
         public void NoneAction() => currentState.Sleep();
         public void UpAction() => currentState.Up();
         public void DownAction() => currentState.Down();

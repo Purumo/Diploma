@@ -1,5 +1,5 @@
 ﻿using GameScene.EnemiesModule;
-using GameScene.GameMaster;
+using GameScene.BulletsModule.PointerEnterExitAction;
 using GameScene.TurretsModule;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -13,45 +13,43 @@ namespace GameScene.BulletsModule
 
         public PointerEnterExitHandler pointerEnterExitHandler;
 
-        public float timeBetweenBonuse;
-        public int actionCount;
+        [Range(0, 600)] public float timeBetweenBonuse;
+        [Range(0, 10)] public int actionCount;
         public Bullet bullet;
         void Start()
         {
             pointerEnterExitHandler.onPointerEnterEvent.AddListener(OnPointerEnter);
             pointerEnterExitHandler.onPointerExitEvent.AddListener(OnPointerExit);
             InvokeRepeating("SpawnBonuse", timeBetweenBonuse, timeBetweenBonuse);
-        }
+        }
         void SpawnBonuse()
         {
             float xTo = TurretsController.GetInstance().rightTurret.gameObject.transform.position.x;
             float yTo = TurretsController.GetInstance().topTurret.gameObject.transform.position.y;
             Vector2 spawnPoint = WaveSpawner.SelectRandomRectangleSpawnPoint(-xTo, xTo, -yTo, yTo);
-            GameObject spriteObject = Instantiate(bullet.Sprite, spawnPoint,
+            GameObject spriteObject = Instantiate(bullet.sprite, spawnPoint,
                 Quaternion.identity, BulletsController.GetInstance().bonusesPool);
             Sprite sprite = spriteObject.GetComponent<Sprite>();
             sprite.activateFunc = delegate { Activate(); };
-        }
+        }
         public void Activate()
         {
             if (!icon)
             {
                 BulletsController.GetInstance().AddNewBonusAction(bullet);
-                icon = Instantiate(bullet.Icon, BulletsController.GetInstance().bonusesPanelUI);
+                icon = Instantiate(bullet.icon, BulletsController.GetInstance().bonusesPanelUI);
             }
             icon.transform.SetAsFirstSibling();
             countdownActionCount = actionCount;
-            bullet.CountdownText = icon.GetComponentInChildren<Text>();
-            bullet.CountdownText.text = countdownActionCount.ToString();
+            bullet.countdownText = icon.GetComponentInChildren<Text>();
+            bullet.countdownText.text = countdownActionCount.ToString() + " в";
         }
-
-        //event on Shoot button
         public void OnPointerEnter(PointerEventData data)        {
             if (countdownActionCount > 0
                 && BulletsController.GetInstance().GetBonusAtIndex(0) == bullet)
             {
                 countdownActionCount--;
-                bullet.CountdownText.text = countdownActionCount.ToString();
+                bullet.countdownText.text = countdownActionCount.ToString() + " в";
             }
         }
         public void OnPointerExit(PointerEventData data)        {

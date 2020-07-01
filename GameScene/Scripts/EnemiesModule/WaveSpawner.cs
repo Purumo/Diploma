@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using GameScene.GameMaster.Statistic;
 
 namespace GameScene.EnemiesModule
 {
@@ -8,34 +9,28 @@ namespace GameScene.EnemiesModule
     public class Wave
     {
         public GameObject enemy;
-        public int count;
-        public float rate;
+        [Range(0, 15)] public int count;
+        [Range(0, 5)] public float rate;
     }
     public class WaveSpawner : MonoBehaviour
     {
         private int waveIndex = 0;
 
-        public static int enemiesAlive;// = 0;
-
+        public static int enemiesAlive;
         public static int currentWaveCount;
-        //public static bool currentWaveSpawned;
 
         private float nextWaveCountdown = 0;
         public Text nextWaveCountdownText;
 
-        //public Text waveCountdownText;
         public BoxCollider2D movementBorder;
 
-        public float timeBetweenWaves = 5.4f;//??
+        [Range(0, 30)] public float timeBetweenWaves = 5f;
         public Wave[] waves;
 
         void Start()
         {
             enemiesAlive = 0;
             currentWaveCount = 0;
-
-            //currentKilledEnemyWaveIdx = 0;
-            //currentWaveSpawned = false;
         }
         void Update()
         {
@@ -43,13 +38,6 @@ namespace GameScene.EnemiesModule
             {
                 return;                
             }
-
-            //if (currentWaveSpawned)// & enemiesAlive == 0
-            //{
-            //    PlayerStatistic.GetInstance().RoundPassed();
-            //    currentWaveSpawned = false;
-            //}
-
             if (nextWaveCountdown <= 0f)
             {
                 PlayerStatistic.GetInstance().nextWaveCountdownPanel.SetActive(false);
@@ -61,11 +49,10 @@ namespace GameScene.EnemiesModule
             }
             else
             {
-                nextWaveCountdownText.text = Mathf.Round(nextWaveCountdown).ToString();//string.Format("{0:00.00}", countdown);???
+                nextWaveCountdownText.text = Mathf.Round(nextWaveCountdown).ToString();
             }
             nextWaveCountdown -= Time.deltaTime;
         }
-
         IEnumerator SpawnWave()
         {
             waveIndex = Random.Range(0, waves.Length);
@@ -75,20 +62,15 @@ namespace GameScene.EnemiesModule
             for (int i = 0; i < currentWaveCount; i++)
             {
                 SpawnEnemy(wave.enemy);
-                yield return new WaitForSeconds(1f / wave.rate);//с заданной частотой появления
+                yield return new WaitForSeconds(1f / wave.rate);
             }
-            //currentWaveSpawned = true;
         }
         void SpawnEnemy(GameObject enemy)
         {
-            //необходимо выбрать точку из movementPoints с индексом первого элемента случайно выбранной строки (траектории)
-            //вдобавок по этой выбранной траектории и пойдёт новый спрайт
-            //newEnemy = (GameObject)spritesFromResource[Random.Range(0, spritesFromResource.Length)];
-
             float xTo = (movementBorder.offset.x + movementBorder.size.x / 2) * movementBorder.transform.localScale.x;
             float yTo = (movementBorder.offset.y + movementBorder.size.y / 2) * movementBorder.transform.localScale.y;
             Vector2 spawnPoint = SelectRandomRectangleSpawnPoint(-xTo, xTo, -yTo, yTo);
-            Instantiate(enemy, spawnPoint, Quaternion.identity, transform);//enemiesPool.transform
+            Instantiate(enemy, spawnPoint, Quaternion.identity, transform);
 
             enemiesAlive++;
         }

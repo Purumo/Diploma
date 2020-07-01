@@ -418,9 +418,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   varSpeed: 0
   lifeTimeAtEndPath: 60
-  speed: 2
-  health: 50
-  killPoints: 25
+  speed: 1.6
+  health: 60
+  killPoints: 60
 --- !u!114 &-922046607207913058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,4 +433,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f0a13a47cee5d428ec48ef41fe2c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveTrajectory: 

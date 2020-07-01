@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
-namespace GameScene.GameMaster
+namespace GameScene.BulletsModule.PointerEnterExitAction
 {
     [System.Serializable]
     public class PointerEvent :         UnityEngine.Events.UnityEvent<PointerEventData> { };

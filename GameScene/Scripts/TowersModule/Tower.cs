@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-namespace GameScene.Tower
+﻿using GameScene.GameMaster.GameManager;
+using UnityEngine;
+namespace GameScene.TowersModule
 {
     public class Tower : MonoBehaviour
     {

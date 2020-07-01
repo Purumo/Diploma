@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8371495622338432043}
   - component: {fileID: 8371495622338432040}
   - component: {fileID: 8371495622338432041}
-  - component: {fileID: 8371495622338432054}
+  - component: {fileID: -8988237688262336872}
   m_Layer: 12
   m_Name: RetardingBullet
   m_TagString: Untagged
@@ -92,7 +92,7 @@ PolygonCollider2D:
       - {x: 0.14177932, y: -0.71881145}
       - {x: 0.27507272, y: -0.53539336}
       - {x: 0.35971805, y: -0.25714356}
---- !u!114 &8371495622338432054
+--- !u!114 &-8988237688262336872
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8371495622338432055}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 652355832f4f4d04fb45e24a50e2f2ef, type: 3}
+  m_Script: {fileID: 11500000, guid: d6435ae7f9acc9e4f8f5e485f2918ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8371495622503245195

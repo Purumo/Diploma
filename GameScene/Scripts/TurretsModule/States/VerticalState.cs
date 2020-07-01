@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
 
 namespace GameScene.TurretsModule
 {
@@ -10,12 +8,12 @@ namespace GameScene.TurretsModule
         {
             controller.varSpeed = controller.moveTurretsSpeed;
 
-            controller.horizCanvasGroup.alpha = 0.5f;
-            controller.verticalCanvasGroup.alpha = 1f;
+            controller.horizButtonsCanvasGroup.alpha = 0.5f;
+            controller.verticalButtonsCanvasGroup.alpha = 1f;
         }
         public override void Move()
         {
-            controller.turretsVertical.velocity = controller.varSpeed * currentMoveDirection;
+            controller.rigidbodyTurretsVertical.velocity = controller.varSpeed * currentMoveDirection;
         }
         public override void Sleep() => controller.varSpeed = 0;
         public override void Up() { }

@@ -1,6 +1,5 @@
 ﻿using GameScene.EnemiesModule;
 using UnityEngine;
-//using GameScene.Effects;
 
 namespace GameScene.BulletsModule
 {
@@ -10,67 +9,46 @@ namespace GameScene.BulletsModule
         private Rigidbody2D rb;
 
         private Bullet bullet;
-
         void Awake()
         {
-            rb = GetComponent<Rigidbody2D>();
+            rb = GetComponent<Rigidbody2D>();
             bullet = new Bullet(BulletsController.GetInstance().currentBullet);
         }
         protected void FixedUpdate()
         {
-            rb.AddForce(dir * bullet.Speed * Time.fixedDeltaTime);
-            Destroy(gameObject, bullet.LifeTime);
+            rb.AddForce(dir * bullet.speed * Time.fixedDeltaTime);
+            Destroy(gameObject, bullet.lifeTime);
         }
         public void Seek(Vector2 direction, Bullet bullet)
         {
             dir = direction.normalized;
             this.bullet = new Bullet(bullet);
         }
-
         public void OnCollisionEnter2D(Collision2D collision)
         {
-            #region Code node for effect rotate
-            /*
-            quaternion.euler(vec)
-            st
-            float rotx = dir.x != 0 ? dir.x * -90 : (dir.y + 1) * -90;
-            vector4 vec = new vector4(rotx, 90, 45, 1);
-            nonst
-            float rotx = dir.x != 0 ? dir.x * -90 : (dir.y + 1) * -90;
-            vector4 vec = new vector4(rotx, 0, 0, 1);
-            */
-            #endregion
-            //GameObject effectIns = Instantiate(bullet.ImpactEffect, transform.position,
-            //    Quaternion.identity, BulletsController.GetInstance().effectsPool);
-
-            //float lifeTime = bullet.ImpactEffect.GetComponent<ParticleSystem>().main.startLifetimeMultiplier;
-            //Destroy(effectIns, lifeTime);
-
-            if (bullet.ExplosionRadius == 0)
+            if (bullet.actionRadius == 0)
             {
                 Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-                enemy.TakeDamage(bullet.Damage);
-                enemy.ChangeSpeed(bullet.SlowEnemyAmount, bullet.SlowActionTime);
+                enemy.TakeDamage(bullet.damage);
+                enemy.ChangeSpeed(bullet.slowdownPercentage, bullet.slowActionTime);
             }
             else
             {
-                //paste circle effect here
                 Damage();
             }
 
             Destroy(gameObject);
         }
-        void Damage()//Explode
+        void Damage()
         {
-            //reqiures in refactoring
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position,
-                bullet.ExplosionRadius, BulletsController.layerMaskEnemy);
+                bullet.actionRadius, BulletsController.layerMaskEnemy);
             Enemy enemy;
             foreach (Collider2D collider in colliders)
             {
                 enemy = collider.gameObject.GetComponent<Enemy>();
-                enemy.TakeDamage(bullet.Damage);
-                enemy.ChangeSpeed(bullet.SlowEnemyAmount, bullet.SlowActionTime);
+                enemy.TakeDamage(bullet.damage);
+                enemy.ChangeSpeed(bullet.slowdownPercentage, bullet.slowActionTime);
             }
         }
     }

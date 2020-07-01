@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using GameScene.GameMaster.Statistic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,13 +10,12 @@ namespace GameScene.EnemiesModule
         private Image healthBar;
         private float varHealth;
 
-        //[HideInInspector] public float slowActionTime;
         [HideInInspector] public float varSpeed;
         [HideInInspector] public float lifeTimeAtEndPath = 60f;
 
-        public float speed = 0f;
-        public float health = 0f;
-        public int killPoints = 0;
+        [Range(0, 10)] public float speed = 0f;
+        [Range(0, 100)] public float health = 0f;
+        [Range(0, 500)] public int killPoints = 0;
 
         void Start()
         {
@@ -24,7 +23,6 @@ namespace GameScene.EnemiesModule
             varHealth = health;
             varSpeed = speed;
         }
-
         public void TakeDamage(int amount)
         {
             varHealth -= amount;
@@ -40,7 +38,7 @@ namespace GameScene.EnemiesModule
             
             Destroy(gameObject);
         }
-        public void ChangeSpeed(float pct, float slowTime) //0 <= pct <= 1 : 0 - normal speed, 1 - stop
+        public void ChangeSpeed(float pct, float slowTime) 
         {
             if (pct != 0 && slowTime != 0)
             {
@@ -49,7 +47,7 @@ namespace GameScene.EnemiesModule
         }
         private IEnumerator Slow(float pct, float slowTime)
         {
-            varSpeed = speed * (1f - pct);
+            varSpeed = speed * (100 - pct) / 100;
             yield return new WaitForSeconds(slowTime);
             varSpeed = speed;
         }
